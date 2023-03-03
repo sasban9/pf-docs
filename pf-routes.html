@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>routes - pixfirst.com</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name="description" content="Routes in main PixFirst app">
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            background-color: #eee;
+        }
+
+        tr td:nth-child(1) {
+            font-size: 1.4rem;
+            font-weight: bold;
+            background-color: khaki;
+        }
+    </style>
+    <!-- <script src='main.js'></script> -->
+</head>
+
+<body>
+
+    <table class="table-sm table">
+        <tr>
+            <td colspan="11" style="background:orange">
+                <h2 class="m-3 text-center">REST APIs (188)</h2>
+            </td>
+        </tr>
+        <tr>
+            <!-- <td>/agency/</td> -->
+        </tr>
+        <tr>
+            <td>/api/api-auth/
+            </td>
+            <td>
+                login/ <br> logout/
+            </td>
+        </tr>
+        <tr>
+            <td>/api/api-auth/v6</td>
+            <td>
+                photographer_admin/ <br>
+                photographers/ <br>
+                photographers/: PK/ <br>
+                schools/ <br>
+                schools/: PK/
+            </td>
+            <td colspan="4">
+                photographers/: pg_id/schools/ <br>
+                photographers/: pg_id/schools/: school_id/ <br>
+                photographers/: pg_id/schools/: school_id/events/ <br>
+                photographers/: pg_id/schools/: school_id/events/: event_id/ <br>
+                photographers/: pg_id/schools/: school_id/events/: event_id/albums/ <br>
+                photographers/: pg_id/schools/: school_id/events/: event_id/albums/: album_id/ <br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                /api/event/list/ <br>
+                /api/key/get/ <br>
+                /api/key/reset/
+            </td>
+        </tr>
+        <tr>
+            <td>/api/printer/school/</td>
+            <td>
+                ordered-products/ <br>
+                ordered-products/: PK/ <br>
+                photos-with-access-card/ <br>
+                photos-with-access-card/: PK/ <br>
+            </td>
+        </tr>
+        <tr>
+            <td>/api/v1/album/</td>
+            <td>
+                create/ <br>
+                photo-count/update/ <br>
+                photo/upload/
+            </td>
+        </tr>
+        <tr>
+            <td>
+                /api/v1/albums/duplicate-check/
+            </td>
+        </tr>
+        <tr>
+            <td>/api/v3/</td>
+            <td>album/list/ <br>
+                client-log-upload/ <br>
+                client-upgrade-check/ <br>
+                event/api/ <br>
+                photo-pass/ <br>
+                pixpass/
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                /api/v41/event/api/ <br>
+                /api/v48/event/api/ <br>
+                /api/v50/photographer/api/
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                /api/v6/ <br>/api/v6/.: format
+            </td>
+        </tr>
+        <tr>
+            <td>/api/v6</td>
+            <td>access-card/ <br>
+                access-card/.: format <br>
+                access-card/: PK/ <br>
+                access-card/: PK/.: format
+            </td>
+            <td>change-password/ <br>
+                change-password/.: format <br>
+                change-password/: PK/ <br>
+                change-password/: PK/.: format
+            </td>
+            <td>op_rank/ <br>
+                op_rank/.: format<br>
+                op_rank/: PK/ <br>
+                op_rank/: PK/.: format
+            </td>
+            <td>org-address/ <br>
+                org-address/.: format<br>
+                org-address/: PK/ <br>
+                org-address/: PK/.: format
+            </td>
+        </tr>
+        <tr>
+            <td>/api/v6</td>
+            <td>org-bankdetails/ <br>
+                org-bankdetails/.: format <br>
+                org-bankdetails/: PK/ <br>
+                org-bankdetails/: PK/.: format
+            </td>
+            <td>org-setting/ <br>
+                org-setting/.: format <br>
+                org-setting/: PK/ <br>
+                org-setting/: PK/.: format
+            </td>
+            <td>org-setting-list/ <br>
+                org-setting-list/.: format <br>
+                org-setting-list/: PK/ <br>
+                org-setting-list/: PK/.: format
+            </td>
+        </tr>
+        <tr>
+            <td>/api/v6</td>
+            <td>
+                /pg-bankdetails/ <br>/pg-bankdetails/.: format <br>/pg-bankdetails/: PK/ <br>/pg-bankdetails/: PK/.:
+                format
+            </td>
+            <td>
+                /photographer-invoice-csv/ <br> /photographer-invoice-csv/.: format <br> photographer-invoice-csv/: PK/
+                <br> photographer-invoice-csv/: PK/.: format
+            </td>
+            <td>
+                /photographer-invoice/ <br> /photographer-invoice/.: format <br> /photographer-invoice/: PK/ <br>
+                /photographer-invoice/: PK/.: format
+            </td>
+            <td>
+                /photographer-plan/ <br> /photographer-plan/.: format <br> /photographer-plan/: PK/ <br>
+                /photographer-plan/: PK/.: format
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                /photographer-setting/ <br> /photographer-setting/.: format <br> /photographer-setting/: PK/ <br>
+                /photographer-setting/: PK/.: format
+            </td>
+            <td>
+                /photographers/ <br> /photographers/.: format <br> /photographers/: PK/ <br> /photographers/: PK/.:
+                format
+            </td>
+            <td>
+                /pixf-user/ <br> /pixf-user/.: format <br> /pixf-user/: PK/ <br> /pixf-user/: PK/.: format
+            </td>
+            <td>
+                /pricelist/ <br> /pricelist/.: format <br> /pricelist/: PK/ <br> /pricelist/: PK/.: format <br>
+                /pricelist/clone/ <br> /pricelist/clone/.: format
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                /print-req-details/ <br> /print-req-details/.: format <br> /print-req-details/: PK/ <br>
+                /print-req-details/: PK/.: format
+            </td>
+            <td>
+                /product-price-rule/ <br> /product-price-rule/.: format <br> /product-price-rule/: PK/ <br>
+                /product-price-rule/: PK/.: format <br> /product-price-rule/download/
+                <br>/product-price-rule/download/.: format
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                /sales-status-update/ <br> /sales-status-update/.: format <br> /sales-status-update/: PK/ <br>
+                /sales-status-update/: PK/.: format
+            </td>
+            <td>
+                /shipping/ <br> /shipping/.: format <br> /shipping/: PK/ <br> /shipping/: PK/.: format
+            </td>
+            <td>
+                /sites/ <br> /sites/.: format <br> /sites/: PK/ <br> /sites/: PK/.: format
+            </td>
+        </tr>
+        <tr>
+            <td>/api/v6/price-list-rule</td>
+            <td>
+                / <br> /: PK/ <br>
+                /bulk_update/ <br>
+                /download/
+            </td>
+            <td>
+                /.: format <br>
+                /: PK/.: format <br>
+                /bulk_update/.: format <br>
+                /download/.: format
+            </td>
+        </tr>
+        <!-- <tr>
+            <td>/api/v6/orgs/: org_pk/events/</td>
+            <td></td>
+        </tr> -->
+        <tr>
+            <td>/api/v6/orgs/: org_pk/events/: event_pk/</td>
+            <td>
+                albums/ <br>
+                albums/: album_pk/photos/ <br>
+                albums/: album_pk/photos/: PK/ <br>
+                albums/: PK/
+
+            </td>
+        </tr>
+        <tr>
+            <td>/api/v6/orgs/: org_pk/events/</td>
+            <td>
+                / <br>
+                : PK/ <br>
+                : PK/delete_events/ <br>
+                : PK/update_events_pricelist/</td>
+        </tr>
+        <tr>
+            <td>/api/v6/orgs/: org_pk</td>
+            <td>/org-orders/ <br>
+                /org-orders/: PK/ <br>
+            </td>
+            <td>
+                /photos/ <br>
+                /photos/: PK/ <br></td>
+            <td>
+                /print-jobs/ <br>
+                /print-jobs/: PK/ <br>
+            </td>
+            <td>
+                /tickets/ <br>
+                /tickets/: PK/ <br>
+            </td>
+        </tr>
+        <tr>
+            <td>/api/v6/orgs/: org_pk/print-jobs/: PK</td>
+            <td>
+                /create_default_print_request/ <br>
+                /generate_files/ <br>
+                /run_print_requests/ <br>
+                /update_print_job_files/ <br>
+                /update_print_requests/ <br>
+                /upload_print_job_files_request/
+
+            </td>
+        </tr>
+        <tr>
+            <td>/api/v6/orgs/: org_pk/print-jobs/: print_job_pk</td>
+            <td>
+                /print-job-files/ <br>
+                /print-job-files/: PK/ <br>
+                /print-job-files/download/ <br>
+                /print-job-print-requests/ <br>
+                /print-job-print-requests/: PK/
+
+            </td>
+        </tr>
+        <tr>
+            <td>/api/v6/orgs/: PK/</td>
+            <td>
+                / <br>
+                get_all_photos_of_org/ <br>
+                get_org_extra_info/ <br>
+                get_org_parents_emails_without_orders/ <br>
+                get_products_without_price_from_price_lists/ <br>
+                override_org_ftp_with_photographer_ftp_settings/
+            </td>
+            <td colspan="3">
+                /.: format <br>
+                get_all_photos_of_org/.: format <br>
+                get_org_extra_info/.: format <br>
+                get_org_parents_emails_without_orders/.: format <br>
+                get_products_without_price_from_price_lists/.: format <br>
+                override_org_ftp_with_photographer_ftp_settings/.: format
+            </td>
+        </tr>
+        <tr>
+            <td>/api/v6/products</td>
+            <td>
+                / <br>
+                /: PK/ <br>
+                /add_product_to_price_rule/ <br>
+                /delete_product_from_price_rule/ <br>
+                /get_available_products_for_price_list_query/ <br>
+                /get_product_details/ <br>
+                /special/
+            </td>
+            <td colspan="8">
+                /.: format <br>
+                /: PK/.: format <br>
+                /add_product_to_price_rule/.: format <br>
+                /delete_product_from_price_rule/.: format <br>
+                /get_available_products_for_price_list_query/.: format <br>
+                /get_product_details/.: format <br>
+                /special/.: format
+            </td>
+        </tr>
+        <tr>
+            <td>/api/v6/profile</td>
+            <td>
+                / <br> /.: format <br>
+            </td>
+            <td>/: PK/ <br> /: PK/.: format <br>
+            </td>
+            <td>/: PK/copy_pg_ftp_to_orgs/ <br> /:
+                PK/copy_pg_ftp_to_orgs/.: format
+            </td>
+        </tr>
+        <tr>
+            <td colspan="11" style="background:orange">
+                <h2 class="m-3 text-center">PF Website URLs (492)</h2>
+            </td>
+        </tr>
+        <tr>
+            <td>/en-us</td>
+            <td>/contact-form/ <br>/contact-support-success/ <br>/contact-support/ <br>/events/ <br> /favicon.ico <br> /favicon.ico <br> /filme[u]r/.* <br> /filmeur/ <br> </td>
+            <td>/filmeur/frequently-asked-questions/ <br> /filmeur/how-it-works/ <br> /filmeur/how-it-works/customer-purchase-demo/ <br> /filmeur/how-it-works/smartphone-app/ <br> /filmeur/sign-up/ <br> /filmeur/sign-up/complete/ <br> /founder-note/ <br> /i18n/setlang/</td>
+        </tr>
+        <tr>
+            <td>/en-us/dev</td>
+            <td>
+                /500 <br>
+                /raise-critical-error <br>
+                /send-photographer-reminders
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>/en-us/main</td>
+            <td>/generic_form/ <br> /new_home/ <br> /print-html-content-for-given-page-size/ <br> /setlang/:lang_code/</td>
+        </tr>
+        <tr>
+            <td>/en-us/my-account</td>
+            <td>/mobile-password-reset/done/ <br> /password-change/ <br> /password-change/done/ <br> /password-reset/ <br> /password-reset/done/ <br> /reset/:uidb36>-:token>/ <br> /reset/done/</td>
+        </tr>
+        <tr>
+            <td colspan="11" style="background:orange">
+                <h2 class="m-3 text-center">PF Admin URLs (125)</h2>
+            </td>
+        </tr>
+        <tr>
+            <td>/en-us/admin</td>
+            <td>/acaccounts/ <br>/actransactions/ <br>===========<br>/albums/ <br> /albums/query/ <br> /campaigns/ <br>
+                /campaigns/send_emails <br> /celery-status/ <br> /check_if_site_slow/ <br> /copy_photos_in_album/
+            </td>
+            <td>
+                /db-backup/new/ <br>/download-pending-orders-excel <br>/dynamic_calendar/ <br>/dynamic_calendar/convert/
+                :product_id/ <br>/email_photo_processing_status/ <br>
+            </td>
+            <td>
+                /forward-album/:user_album_id/:album_name/ <br> /generate-settings/ <br>
+                /get-user-details-from-sessionid/ <br> /home/ <br> /issues/summary/ <br> /login/ <br> /logout/ <br>
+                /mail-log/ <br>/org-setting-mapping/
+            </td>
+            <td>
+                /parents-email-no-orders/ <br>/paybox/recon/ <br>/photos/ <br>/positive_org_accounts/ <br>/print-jobs/
+                <br>/print-jobs/:print_job_id/update-status/ <br>/print-jobs/query/ <br>/reduce-storage-for-orgs/
+            </td>
+        </tr>
+        <tr>
+            <td>/en-us/admin</td>
+            <td>
+                /send-notification/<br>/send-uploaded-email-for-album/:album_id/:album_name/<br>/si/<br>/ss/<br>/test-notification/
+            </td>
+            <td>/show_generic_form_entries/:form_name/<br>/show_generic_form_entries/:form_name/query/<br>/show_generic_forms/<br>/show_generic_forms/query/
+            </td>
+        </tr>
+        <tr>
+            <td>/en-us/admin/account</td>
+            <td>
+                /password-change/ <br> /password-change/done/ <br> /password-reset/ <br> /password-reset/done/
+            </td>
+            <td>
+                /reset/:uidb36 - :token/ <br> /reset/done/
+            </td>
+        </tr>
+        <tr>
+            <td>/en-us/admin/es</td>
+            <td>
+                /albums/ <br> /customers/ <br> /events/ <br> /events/: PK/ </td>
+            <td>/orders/ <br> /orders/: PK/ <br> /orders/: PK/action <br> /orders/: PK/cancel <br> /orders/:
+                PK/mark-purchase-order-as-paid
+            </td>
+        </tr>
+        <tr>
+            <td>/en-us/admin/o</td>
+            <td>
+                /-/oo/: orgorder_id/bill/ <br>/-/oo/: orgorder_id/invoice/
+            </td>
+            <td>
+                /: org_id/edit/ <br>/: org_id/make_payment_entry/ <br>/: org_id/transactions/
+            </td>
+            <td>
+                /bank_payments/non-school-photographers/ <br>/make-bulk-payment-entries/ <br>
+            </td>
+        </tr>
+        <tr>
+            <td>/en-us/admin/offers</td>
+            <td>
+                / <br> /:var/:var/edit/ <br> /:var/:var/view/ <br> /activate/ <br> /assign/ <br> /create/ <br>
+                /deactivate/ <br> /delete/ <br> /query/
+            </td>
+        </tr>
+        <tr>
+            <td>/en-us/admin/organizations</td>
+            <td>
+                / <br> /active_orgs/orders/ <br> /active_orgs/payment_instructions/ <br> /active_orgs/payments/ <br>
+                /generate-invoice/ <br> /generate-school-invoice/ <br> /invoices/ <br> /new/invoices/
+            </td>
+            <td>/payment-gateway-collection/csv/ <br>/payments/ <br>/payments/:payment_log_id/
+                <br>/payments/:payment_log_id/wiring/:payment_info_id/ <br>
+            </td>
+        </tr>
+        <tr>
+            <td>/en-us/admin/reports</td>
+            <td>
+                / <br> /current-uploads/ <br> /goals/ <br> /pending-customer-orders/ <br> /photographers/ <br>
+                /print_forecast/ <br> /sales-triggered-activity/orgs-to-print/ <br> /server/celery/ <br>
+                /system-activity/ <br> /warehouse/schools/
+            </td>
+            <td>
+                /org_activity/ <br>/org_activity/detailed/ <br>/orgs-payment-gateway-collections/
+                <br>/orgs-photo-service-accounts/ <br>/orgs-photo-service-orders/ <br>/orgs-photo-service-orders/missed/
+            </td>
+        </tr>
+        <tr>
+            <td colspan="12" style="background: orange;">
+                <h2 class="m-3 text-center">Django Admin URLs (302)</h2>
+            </td>
+        </tr>
+        <tr>
+            <td>/en-us/django-admin</td>
+            <td>/ <br>/:app_label/ <br>/jsi18n/ <br>/logout/</td>
+            <td>/password_change/ <br>/password_change/done/ <br>/r/:content_type_id/:object_id/</td>
+        </tr>
+        <tr>
+            <td>/en-us/django-admin/accounts/</td>
+            <td>photographerdevice/ <br>photographerdevice/:var/ <br>photographerdevice/:var/delete/
+                <br>photographerdevice/:var/history/ <br>photographerdevice/add/
+            </td>
+            <td>photographerprofile/ <br>photographerprofile/:var/ <br>photographerprofile/:var/delete/
+                <br>photographerprofile/:var/history/ <br>photographerprofile/add/
+            </td>
+            <td>userprofile/ <br>userprofile/:var/ <br>userprofile/:var/delete/ <br>userprofile/:var/history/
+                <br>userprofile/add/
+            </td>
+        </tr>
+        <tr>
+            <td>/en-us/django-admin/auth</td>
+            <td>/group/ <br>/group/:var/ <br>/group/:var/delete/ <br>/group/:var/history/ <br>/group/add/ </td>
+            <td>/user/ <br>/user/:var/ <br>/user/:var/delete/ <br>/user/:var/history/ <br>/user/:var/password/
+                <br>/user/add/
+            </td>
+        </tr>
+        <tr>
+            <td>/en-us/django-admin/djcelery</td>
+            <td>/crontabschedule/ <br> /crontabschedule/:var/ <br> /crontabschedule/:var/delete/ <br>
+                /crontabschedule/:var/history/ <br> /crontabschedule/add/ </td>
+            <td>/intervalschedule/ <br> /intervalschedule/:var/ <br> /intervalschedule/:var/delete/ <br>
+                /intervalschedule/:var/history/ <br> /intervalschedule/add/ </td>
+            <td>/periodictask/ <br> /periodictask/:var/ <br> /periodictask/:var/delete/ <br> /periodictask/:var/history/
+                <br> /periodictask/add/
+            </td>
+            <td>/taskstate/ <br> /taskstate/:var/ <br> /taskstate/:var/delete/ <br> /taskstate/:var/history/ <br>
+                /taskstate/add/ </td>
+            <td>/workerstate/ <br> /workerstate/:var/ <br> /workerstate/:var/delete/ <br> /workerstate/:var/history/
+                <br> /workerstate/add/
+            </td>
+        </tr>
+        <tr>
+            <td>/en-us/django-admin/doc</td>
+            <td>/ <br>/bookmarklets/ <br>/filters/ <br>/models/ <br>/models/:app_label.:model_name/ </td>
+            <td>/tags/<br>/templates/:template/ <br>/views/ <br>/views/:view/
+            </td>
+        </tr>
+        <tr>
+            <td>/en-us/django-admin/iphotographer/leads</td>
+            <td>/ <br>/:var/ <br>/:var/delete/ <br>/:var/history/ <br>/add/</td>
+        </tr>
+        <tr>
+            <td>/en-us/django-admin/main</td>
+            <td>/campaign/ <br>/campaign/:var/ <br>/campaign/:var/delete/ <br>/campaign/:var/history/ <br>/campaign/add/
+            </td>
+            <td>/campaignoffer/ <br>/campaignoffer/:var/ <br>/campaignoffer/:var/delete/
+                <br>/campaignoffer/:var/history/ <br>/campaignoffer/add/
+            </td>
+            <td>/customeroffer/ <br>/customeroffer/:var/ <br>/customeroffer/:var/delete/
+                <br>/customeroffer/:var/history/ <br>/customeroffer/add/
+            </td>
+            <td>/emailtemplate/ <br>/emailtemplate/:var/ <br>/emailtemplate/:var/delete/
+                <br>/emailtemplate/:var/history/ <br>/emailtemplate/add/
+            </td>
+            <td>/emailtemplatecontent/ <br>/emailtemplatecontent/:var/ <br>/emailtemplatecontent/:var/delete/
+                <br>/emailtemplatecontent/:var/history/ <br>/emailtemplatecontent/add/
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>/esalbum/ <br> /esalbum/:var/ <br> /esalbum/:var/delete/ <br> /esalbum/:var/history/ <br> /esalbum/add/</td>
+            <td>/esphoto/ <br>/esphoto/:var/ <br>/esphoto/:var/delete/ <br> /esphoto/:var/history/ <br> /esphoto/add/ </td>
+            <td>/esuseralbum/ <br> /esuseralbum/:var/ <br> /esuseralbum/:var/delete/ <br> /esuseralbum/:var/history/
+                <br> /esuseralbum/add/ </td>
+            <td>/event/ <br> /event/:var/ <br> /event/:var/delete/ <br> /event/:var/history/ <br> /event/add/</td>
+            <td>/eventbasedoffer/ <br> /eventbasedoffer/:var/ <br> /eventbasedoffer/:var/delete/ <br>
+                /eventbasedoffer/:var/history/ <br> /eventbasedoffer/add/</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>/eventbasedpricingrule/ <br> /eventbasedpricingrule/:var/ <br> /eventbasedpricingrule/:var/delete/ <br> /eventbasedpricingrule/:var/history/ <br> /eventbasedpricingrule/add/ </td>
+            <td> /eventcampaign/ <br> /eventcampaign/:var/ <br> /eventcampaign/:var/delete/ <br> /eventcampaign/:var/history/ <br> /eventcampaign/add/ </td>
+            <td> /eventtemplates/ <br> /eventtemplates/:var/ <br> /eventtemplates/:var/delete/ <br> /eventtemplates/:var/history/ <br> /eventtemplates/add/</td>
+            <td>/offer/ <br> /offer/:var/ <br> /offer/:var/delete/ <br> /offer/:var/history/ <br> /offer/add/ </td>
+            <td> /offerstats/ <br> /offerstats/:var/ <br> /offerstats/:var/delete/ <br> /offerstats/:var/history/ <br> /offerstats/add/</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>/organization/ <br> /organization/:var/ <br> /organization/:var/delete/ <br> /organization/:var/history/ <br> /organization/add/ </td>
+            <td> /orgfeature/ <br> /orgfeature/:var/ <br> /orgfeature/:var/delete/ <br> /orgfeature/:var/history/ <br> /orgfeature/add/ </td>
+            <td> /orgfeaturemapping/ <br> /orgfeaturemapping/:var/ <br> /orgfeaturemapping/:var/delete/ <br> /orgfeaturemapping/:var/history/ <br> /orgfeaturemapping/add/</td>
+            <td>/orgsettingmapping/ <br> /orgsettingmapping/:var/ <br> /orgsettingmapping/:var/delete/ <br> /orgsettingmapping/:var/history/ <br> /orgsettingmapping/add/ </td>
+            <td> /orgsettingvalue/ <br> /orgsettingvalue/:var/ <br> /orgsettingvalue/:var/delete/ <br> /orgsettingvalue/:var/history/ <br> /orgsettingvalue/add/</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>/orgtype/ <br> /orgtype/:var/ <br> /orgtype/:var/delete/ <br> /orgtype/:var/history/ <br> /orgtype/add/ </td>
+            <td> /orgtypefeature/ <br> /orgtypefeature/:var/ <br> /orgtypefeature/:var/delete/ <br> /orgtypefeature/:var/history/ <br> /orgtypefeature/add/ </td>
+            <td> /orgtypesetting/ <br> /orgtypesetting/:var/ <br> /orgtypesetting/:var/delete/ <br> /orgtypesetting/:var/history/ <br> /orgtypesetting/add/</td>
+            <td>/photographerfeaturemapping/ <br> /photographerfeaturemapping/:var/ <br> /photographerfeaturemapping/:var/delete/ <br> /photographerfeaturemapping/:var/history/ <br> /photographerfeaturemapping/add/ </td>
+            <td> /photographersetting/ <br> /photographersetting/:var/ <br> /photographersetting/:var/delete/ <br> /photographersetting/:var/history/ <br> /photographersetting/add/</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>/photographersettingdefaultvalue/ <br> /photographersettingdefaultvalue/:var/ <br> /photographersettingdefaultvalue/:var/delete/ <br> /photographersettingdefaultvalue/:var/history/ <br> /photographersettingdefaultvalue/add/ </td>
+            <td> /photographersettingmapping/ <br> /photographersettingmapping/:var/ <br> /photographersettingmapping/:var/delete/ <br> /photographersettingmapping/:var/history/ <br> /photographersettingmapping/add/ </td>
+            <td> /photographertype/ <br> /photographertype/:var/ <br> /photographertype/:var/delete/ <br> /photographertype/:var/history/ <br> /photographertype/add/</td>
+            <td>/photographertypesetting/ <br> /photographertypesetting/:var/ <br> /photographertypesetting/:var/delete/ <br> /photographertypesetting/:var/history/ <br> /photographertypesetting/add/ </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>/product/ <br> /product/:var/ <br> /product/:var/delete/ <br> /product/:var/history/ <br> /product/add/ </td>
+            <td> /productprovidertaggroup/ <br> /productprovidertaggroup/:var/ <br> /productprovidertaggroup/:var/delete/ <br> /productprovidertaggroup/:var/history/ <br> /productprovidertaggroup/add/ </td>
+            <td> /producttaggroupitem/ <br> /producttaggroupitem/:var/ <br> /producttaggroupitem/:var/delete/ <br> /producttaggroupitem/:var/history/ <br> /producttaggroupitem/add/</td>
+            <td>/purchaseorder/ <br> /purchaseorder/:var/ <br> /purchaseorder/:var/delete/ <br> /purchaseorder/:var/history/ <br> /purchaseorder/add/ </td>
+            <td> /setting/ <br> /setting/:var/ <br> /setting/:var/delete/ <br> /setting/:var/history/ <br> /setting/add/</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>/taggroup/ <br> /taggroup/:var/ <br> /taggroup/:var/delete/ <br> /taggroup/:var/history/ <br> /taggroup/add/ </td>
+            <td> /taggroupitem/ <br> /taggroupitem/:var/ <br> /taggroupitem/:var/delete/ <br> /taggroupitem/:var/history/ <br> /taggroupitem/add/ </td>
+            <td> /transaction/ <br> /transaction/:var/ <br> /transaction/:var/delete/ <br> /transaction/:var/history/ <br> /transaction/add/</td>
+            <td>/useralbumuploadmail/ <br> /useralbumuploadmail/:var/ <br> /useralbumuploadmail/:var/delete/ <br> /useralbumuploadmail/:var/history/ <br> /useralbumuploadmail/add/ </td>
+        </tr>
+        <tr>
+            <td>/en-us/django-admin/oauth2</td>
+            <td>/accesstoken/ <br> /accesstoken/:var/ <br> /accesstoken/:var/delete/ <br> /accesstoken/:var/history/ <br> /accesstoken/add/ </td>
+            <td> /client/ <br> /client/:var/ <br> /client/:var/delete/ <br> /client/:var/history/ <br> /client/add/ </td>
+            <td> /grant/ <br> /grant/:var/ <br> /grant/:var/delete/ <br> /grant/:var/history/ <br> /grant/add/</td>
+            <td>/refreshtoken/ <br> /refreshtoken/:var/ <br> /refreshtoken/:var/delete/ <br> /refreshtoken/:var/history/ <br> /refreshtoken/add/ </td>
+        </tr>
+        <tr>
+            <td>/en-us/django-admin/sites</td>
+            <td>/site/ <br> /site/:var/ <br> /site/:var/delete/ <br> /site/:var/history/ <br> /site/add/</td>
+        </tr>
+        <tr>
+            <td>/en-us/django-admin/taggit</td>
+            <td>/tag/ <br> /tag/:var/ <br> /tag/:var/delete/ <br> /tag/:var/history/ <br> /tag/add/</td>
+        </tr>
+        <tr>
+            <td>/en-us/django-admin/token_blacklist</td>
+            <td>/blacklistedtoken/ <br> /blacklistedtoken/:var/ <br> /blacklistedtoken/:var/delete/ <br> /blacklistedtoken/:var/history/ <br> /blacklistedtoken/add/</td>
+            <td>/outstandingtoken/ <br> /outstandingtoken/:var/ <br> /outstandingtoken/:var/delete/ <br> /outstandingtoken/:var/history/ <br> /outstandingtoken/add/</td>
+        </tr>
+    </table>
+
+</body>
+
+</html>
