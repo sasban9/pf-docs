@@ -15,14 +15,31 @@
     <!-- <script src='main.js'></script> -->
 </head>
 
-<body>
-    <div class="container">
-        <ul>
-            <li><a href="email-template1.html">Sample EMail Template</a></li>
-            <li><a href="pf-packs.html">PF Packs</a> - Products offering summary of an ORG</li>
-            <li><a href="installation/guide.html">Installation Guide</a></li>
-            <li><a href="PixFirst/pf-routes.html">PF Routing</a></li>
-        </ul>
+<body style="overflow:hidden;height: 100vw;">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-2 bg-dark text-white">
+                <ul class="mt-4">
+                    <li><a href="installation/guide.html">Installation Guide</a></li>
+                    <li><a href="PixFirst/pf-routes.html">PF Routing</a></li>
+                    <li><a href="email-template1.html">Sample EMail Template</a></li>
+                    <li><a href="pf-packs.html">PF Packs</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-10 p-0" style="min-height: 100vh;">
+                <iframe src="pf-packs.html" frameborder="0" width="100%" height="100%"></iframe>
+            </div>
+        </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+            $('li a').on('click', function(e){
+                e.preventDefault();
+                $('iframe').attr('src', $(this).attr('href'));
+            })
+        })
+    </script>
 </body>
 </html>
