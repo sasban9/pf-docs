@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Sales breakdown - pixfirst.com</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name="description" content="Routes in main PixFirst app">
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            background-color: #eee;
+        }
+        i.fa-info{margin-left:0.3rem;}
+        select.form-control {
+            background-color: antiquewhite;margin-bottom:1rem;
+        }
+        textarea.form-control{margin-bottom: 1rem;}
+        /* label{margin:6px 0} */
+
+        tr td:nth-child(2-n) {
+            text-align: right;
+        }
+    </style>
+    <!-- <script src='main.js'></script> -->
+</head>
+
+<body>
+    <table class="table-label d-none" style="margin:auto">
+        <tr>
+            <td></td>
+            <td>750&euro;</td>
+            <td width="400">
+                <table style="width:400px">
+                    <tr style="text-align:center">
+                        <td width="33%" style="background:cyan">School Part</td>
+                        <td width="67%" style="background:gray">Photographer Part</td>
+                    </tr>
+                </table>
+            </td>
+            <td>2.750&euro;</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="104">
+                <h3 class="text-center">&rightthreetimes; 3.500&euro;</h3>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>3.400&euro;</td>
+            <td>
+                <table style="width:400px">
+                    <tr style="text-align:center">
+                        <td width="92%" style="background:cyan">Card</td>
+                        <td width="8%" style="background:gray">Cash</td>
+                    </tr>
+                </table>
+            </td>
+            <td>150&euro;</td>
+            <td></td>
+        </tr>
+    </table>
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-3 g-4 mt-4">
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-header">Configuration de l'organisation</div>
+                    <div class="card-body">
+                        <form action="">
+                            <label for="annee">Année scolaire <i class="fa fa-info-circle"></i></label>
+                            <select name="annee" id="annee" class="form-control" disabled>
+                                <option>2023-2024</option>
+                                <option>2022-2023</option>
+                                <option selected>2021-2022</option>
+                            </select>
+
+                            <label for="annee">Nombre de poses par élève <i class="fa fa-info-circle"></i></label>
+                            <select name="annee" id="annee" class="form-control">
+                                <option>Une pose</option>
+                                <option selected>Plusieurs poses</option>
+                            </select>
+                            <label for="annee">Type d'organisation <i class="fa fa-info-circle"></i></label>
+                            <select name="annee" id="annee" class="form-control">
+                                <option selected>École</option>
+                                <option>Maternité</option>
+                                <option>Autre</option>
+                            </select>
+                            <label for="annee">Org. de maître</label>
+                            <input type="number" class="form-control" value="0" />
+                            <hr/>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input"><label class="form-check-label">Uploader
+                                    seulement des vignettes</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input"><label class="form-check-label">Écran
+                                    vert</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input"><label class="form-check-label">L'école
+                                    est
+                                    Org</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input"><label class="form-check-label">Photo de
+                                    groupe à ONE LEVEL</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input"><label class="form-check-label">Utiliser
+                                    le
+                                    marquage d'orientation</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input"><label class="form-check-label">Affichez
+                                    la
+                                    photo originale avec des exemples de visuels</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input"><label class="form-check-label">
+                                    Email obligatoire de la part des parents pour accéder aux photos</label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-header">Paiement et expédition</div>
+                    <div class="card-body">
+                        <label for="annee">Paiement <i class="fa fa-info-circle"></i></label>
+                        <select name="annee" id="annee" disabled class="form-control">
+                            <option>Tous les deux</option>
+                            <option>Par chèque/espèces seulement</option>
+                            <option selected>Par carte bancaire seulement</option>
+                        </select>
+                        <label for="annee">Instructions telles que l'ordre du chèque <i
+                                class="fa fa-info-circle"></i></label>
+                        <textarea name="" id="" class="form-control" rows="4">Cheque Information</textarea>
+                        <label for="annee">Instructions sur la livraison <i class="fa fa-info-circle"></i></label>
+                        <textarea name="" id="" class="form-control" rows="4">Shipping Information</textarea>
+                        <label for="annee">Ajouter des frais de port</label>
+                        <input type="number" class="form-control mb-3" value="0" />
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input"><label class="form-check-label">Paiement par
+                                carte <i class="fa fa-info-circle"></i></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-header">Le point de vue des parents and a very long name which shouldnt be here but
+                        someone did not do their job well</div>
+                    <div class="card-body">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input"><label class="form-check-label">Supprimer
+                                des
+                                exemples de visuels de la vue du client
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input"><label class="form-check-label">Montrer
+                                l'image
+                                originale avec les visuels de l'échantillon
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input"><label class="form-check-label">Afficher des
+                                vignettes pleine hauteur/largeur dans la page du panier de commande </label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input"><label class="form-check-label">Pour les
+                                trombinoscope, je ne veux pas afficher le nom du fichier</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
