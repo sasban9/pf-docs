@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Products - pixfirst.com</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta property="og:image" content="https://sasban9.github.io/pf-docs/img/pf-packs.png">
+    <meta property="og:title" content="Our Products :: PixFirst">
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        #tags-list li{
+            list-style: none;
+            display: inline-block;
+            font-size: 10pt;
+            color: goldenrod;
+            background-color: palegoldenrod;
+            border: solid 1px goldenrod;
+            margin: 3px 10px;
+            padding: 3px
+        }
+        .btn-sm{margin-bottom:4px}
+        button.bg-secondary {background-color: #ccc !important;}
+    </style>
+    <!-- <script src='main.js'></script> -->
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 mb-3" style="height:100px;background-color: #eee;"></div>
+            <div class="col-lg-3">
+                Available for photos with tag	
+                <select name="locations" id="" class="form-control">
+                    <optgroup label="BLR">
+                        <option value="1">Indiranagar &middot; Bangalore</option>
+                        <option value="3">HSR &middot; Bangalore</option>
+                    </optgroup>
+                    <optgroup  label="DEL">
+                        <option value="2">Hub &middot; Delhi</option>
+                    </optgroup>
+                </select>
+            </div>
+            <div class="col-lg-9">
+                <div style="text-align: right;background-color: #f8f8f8;" class="p-3"><button class="btn btn-outline-dark">Reset</button> <button class="btn btn-outline-primary">Save</button></div>
+                <div id="chosen"><button class="btn btn-sm btn-warning">Individuelle</button>  <button class="btn btn-sm btn-warning">Individuelle vertical</button> 
+ <button class="btn btn-sm bg-warning">Individuelle horizontal pose 02</button>
+ <button class="btn btn-sm bg-warning">Carré pose 02</button>
+ <button class="btn btn-sm bg-warning">Professeurs horizontal</button>
+ <button class="btn btn-sm bg-warning">Fratrie</button></div><hr>
+ <div id="not-chosen">
+ <button class="btn btn-sm bg-secondary">Individuelle horizontal</button> <button class="btn btn-sm bg-secondary">Individuelle pose 02</button>
+ <button class="btn btn-sm bg-secondary">Individuelle vertical pose 02</button>
+ <button class="btn btn-sm bg-secondary">Fratrie vertical</button>
+ <button class="btn btn-sm bg-secondary">Fratrie horizontal</button>
+ <button class="btn btn-sm bg-secondary">Professeurs</button>
+ <button class="btn btn-sm bg-secondary">Professeurs pose 02</button>
+ <button class="btn btn-sm bg-secondary">Professeurs horizontal pose 02</button>
+ <button class="btn btn-sm bg-secondary">Directeur</button>
+ <button class="btn btn-sm bg-secondary">Directeur pose 02</button>
+ <button class="btn btn-sm bg-secondary">Directeur horizontal</button>
+ <button class="btn btn-sm bg-secondary">Directeur horizontal pose 02</button>
+ <button class="btn btn-sm bg-secondary">Carré</button>
+ <button class="btn btn-sm bg-secondary">Groupe</button>
+ <button class="btn btn-sm bg-secondary">Groupe 02</button>
+ <button class="btn btn-sm bg-secondary">Groupe 03</button>
+ <button class="btn btn-sm bg-secondary">Groupe fun</button> <button class="btn btn-sm bg-secondary">Groupe fun 02</button> <button class="btn btn-sm bg-secondary">Groupe fun 03</button> <button class="btn btn-sm bg-secondary">Panoramique</button> <button class="btn btn-sm bg-secondary">Panoramique 02</button> <button class="btn btn-sm bg-secondary">Groupe portrait</button> <button class="btn btn-sm bg-secondary">Groupe portrait pose 02</button> <button class="btn btn-sm bg-secondary">Groupe portrait fun</button> <button class="btn btn-sm bg-secondary">Groupe portrait fun 02</button> <button class="btn btn-sm bg-secondary">Trombi</button> <button class="btn btn-sm bg-secondary">Trombi pose 02</button> <button class="btn btn-sm bg-secondary">Trombi fun</button> <button class="btn btn-sm bg-secondary">Trombi fun pose 02</button> <button class="btn btn-sm bg-secondary">Groupe ecole</button> <button class="btn btn-sm bg-secondary">Groupe ecole 02</button> <button class="btn btn-sm bg-secondary">Groupe ecole 03</button> <button class="btn btn-sm bg-secondary">Groupe ecole portrait</button> <button class="btn btn-sm bg-secondary">Groupe ecole portrait 02</button> <button class="btn btn-sm bg-secondary">Groupe ecole portrait fun</button> <button class="btn btn-sm bg-secondary">Groupe ecole portrait fun 02</button> <button class="btn btn-sm bg-secondary">TROMBI ecole</button> <button class="btn btn-sm bg-secondary">TROMBI ecole pose 02</button> <button class="btn btn-sm bg-secondary">Absent kid</button> <button class="btn btn-sm bg-secondary">Fond de planche</button> <button class="btn btn-sm bg-secondary">Fond de planche 01</button> <button class="btn btn-sm bg-secondary">Fond de planche 02</button></div>
+            </div>
+            <div class="col-lg-4 offset-lg-2 d-none">
+                <select name="tags" id="tags" class="form-control" size="30" multiple onselect="function(){}">
+ <option>Individuelle</option>
+ <option>Individuelle vertical</option>
+ <option>Individuelle horizontal</option>
+ <option>Individuelle pose 02</option>
+ <option>Individuelle vertical pose 02</option>
+ <option>Individuelle horizontal pose 02</option>
+ <option>Fratrie</option>
+ <option>Fratrie vertical</option>
+ <option>Fratrie horizontal</option>
+ <option>Professeurs</option>
+ <option>Professeurs pose 02</option>
+ <option>Professeurs horizontal</option>
+ <option>Professeurs horizontal pose 02</option>
+ <option>Directeur</option>
+ <option>Directeur pose 02</option>
+ <option>Directeur horizontal</option>
+ <option>Directeur horizontal pose 02</option>
+ <option>Carré</option>
+ <option>Carré pose 02</option>
+ <option>Groupe</option>
+ <option>Groupe 02</option>
+ <option>Groupe 03</option>
+ <option>Groupe fun</option>
+ <option>Groupe fun 02</option>
+ <option>Groupe fun 03</option>
+ <option>Panoramique</option>
+ <option>Panoramique 02</option>
+ <option>Groupe portrait</option>
+ <option>Groupe portrait pose 02</option>
+ <option>Groupe portrait fun</option>
+ <option>Groupe portrait fun 02</option>
+ <option>Trombi</option>
+ <option>Trombi pose 02</option>
+ <option>Trombi fun</option>
+ <option>Trombi fun pose 02</option>
+ <option>Groupe ecole</option>
+ <option>Groupe ecole 02</option>
+ <option>Groupe ecole 03</option>
+ <option>Groupe ecole portrait</option>
+ <option>Groupe ecole portrait 02</option>
+ <option>Groupe ecole portrait fun</option>
+ <option>Groupe ecole portrait fun 02</option>
+ <option>TROMBI ecole</option>
+ <option>TROMBI ecole pose 02</option>
+ <option>Absent kid</option>
+ <option>Fond de planche</option>
+ <option>Fond de planche 01</option>
+ <option>Fond de planche 02</option>
+                </select>
+            </div>
+            <div class="col-lg-4">
+                <ul id="tags-list"></ul>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $(function(){
+        $('#tags').change(function(){
+            $('ul#tags-list').empty();
+            $(this).val().forEach(function(m, i){
+                $('ul#tags-list').append('<li>'+m+'</li>');
+            })
+        });
+        $(document).on('click','#chosen button',function(){
+            var v = $(this).text();
+            $('#not-chosen').append(' <button class="btn btn-sm bg-secondary">'+v+'</button>');
+            $(this).remove();
+        })
+        $(document).on('click','#not-chosen button',function(){
+            var v = $(this).text();
+            $('#chosen').append(' <button class="btn btn-sm bg-warning">'+v+'</button>');
+            $(this).remove();
+        })
+    })
+</script>
+</html>
