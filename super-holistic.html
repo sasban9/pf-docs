@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>pixfirst.com</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name="description" content="Email template redesign for photographers">
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-color: #eee;
+        }
+
+        div img {
+            max-width: 100%;
+        }
+    </style>
+    <!-- <script src='main.js'></script> -->
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 mt-2 text-center">
+                <h3 class="text-white bg-dark py-3">SALES DISPLAY</h3>
+            <h4 class="">43 Products - Price High to Low</h4>
+        </div>
+            <div class="col-lg-3">
+
+
+                <div class="container-fluid">
+                    <div class="row mb-2 text-center">
+                        <!-- <div class="col-12  packs" id="pack-xxl" style="background-color: #fff;cursor: pointer;">
+                <div class=" p-2"><h3>PACK 2XL</h3>
+                    <p>60.20&euro;</p></div>
+            </div> -->
+                        <div class="col-12  packs" id="pack-xl"
+                            style="background-color: #f1bbe8;cursor: pointer;">
+                            <div class=" p-2">
+                                <h3>PACK XL</h3>
+                                <h5>49.30&euro; <span class="badge bg-dark">36 sold</span></h5>
+                                <p>REMISE 45%</p>
+                            </div>
+                        </div>
+                        <div class="col-12  packs" id="pack-l"
+                            style="background-color: #f1edbb;cursor: pointer;">
+                            <div class=" p-2">
+                                <h3>PACK L</h3>
+                                <h5>36.80&euro; <span class="badge bg-dark">16 sold</span></h5>
+                                <p>REMISE 35%</p>
+                            </div>
+                        </div>
+                        <div class="col-12  packs" id="pack-m"
+                            style="background-color: #c5f1bb;cursor: pointer;">
+                            <div class=" p-2">
+                                <h3>PACK M</h3>
+                                <h5>29.50&euro; <span class="badge bg-dark">11 sold</span></h5>
+                                <p>REMISE 30%</p>
+                            </div>
+                        </div>
+                        <div class="col-12  packs" id="pack-s"
+                            style="background-color: #bbc9f1;cursor: pointer;">
+                            <div class=" p-2">
+                                <h3>PACK S</h3>
+                                <h5>22.00&euro; <span class="badge bg-dark">15 sold</span></h5>
+                                <p>REMISE 22%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-9">
+
+                <div class="container">
+                    <div class="row mb-2 text-center">
+                        <div class="col-12 bg-warning"><h5>BAND 40-50&euro;</h5></div>
+                        <div class="col-md-6 col-lg-3 card" id="prod1">
+                            <div class=" p-2">
+                                <h3>20x30</h3>
+                                <p>13.80&euro;</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 card" id="prod2">
+                            <div class=" p-2">
+                                <h3>30x80</h3>
+                                <p>13.80&euro;</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 card" id="prod3">
+                            <div class=" p-2">
+                                <h3>20x30</h3>
+                                <p>13.80&euro;</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 card" id="prod4">
+                            <div class=" p-2">
+                                <h3>Calendrier-A</h3>
+                                <p>13.80&euro;</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 card" id="prod4">
+                            <div class=" p-2">
+                                <h3>Calendrier-B</h3>
+                                <p>13.80&euro;</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 card" id="prod4">
+                            <div class=" p-2">
+                                <h3>Calendrier-C</h3>
+                                <p>13.80&euro;</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-2 text-center">
+                        <div class="col-12 bg-warning"><h5>BAND 30-40&euro;</h5></div>
+                        <div class="col-md-6 col-lg-3 card" id="prod5">
+                            <div class=" p-2">
+                                <h3>Cup</h3>
+                                <p>13.80&euro;</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 card" id="prod6">
+                            <div class=" p-2">
+                                <h3>Mug</h3>
+                                <p>13.80&euro;</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 card" id="prod7">
+                            <div class=" p-2">
+                                <h3>NB20x30</h3>
+                                <p>13.80&euro;</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 card" id="prod8">
+                            <div class=" p-2">
+                                <h3>20x30</h3>
+                                <p>13.80&euro;</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-2 text-center">
+                        <div class="col-md-6 col-lg-3 card" id="prod9">
+                            <div class=" p-2">
+                                <h3>20x30</h3>
+                                <p>13.80&euro;</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 card" id="prod10">
+                            <div class=" p-2">
+                                <h3>20x30</h3>
+                                <p>13.80&euro;</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 card" id="prod11">
+                            <div class=" p-2">
+                                <h3>20x30</h3>
+                                <p>13.80&euro;</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 card" id="prod12">
+                            <div class=" p-2">
+                                <h3>20x30</h3>
+                                <p>13.80&euro;</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-2 text-center">
+                        <div class="col-md-6 col-lg-3 card">
+                            <div class=" p-2">
+                                <h3>20x30</h3>
+                                <p>13.80&euro;</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 card">
+                            <div class=" p-2">
+                                <h3>20x30</h3>
+                                <p>13.80&euro;</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 card">
+                            <div class=" p-2">
+                                <h3>20x30</h3>
+                                <p>13.80&euro;</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 card">
+                            <div class=" p-2">
+                                <h3>20x30</h3>
+                                <p>13.80&euro;</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 card">
+                            <div class=" p-2">
+                                <h3>20x30</h3>
+                                <p>13.80&euro;</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-2 text-center">
+                        <div class="col-12 bg-warning"><h5>BAND 20-30&euro;</h5></div>
+                        <div class="col-md-6 col-lg-3 card">
+                            <div class=" p-2">
+                                <h3>20x30</h3>
+                                <p>13.80&euro;</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 card">
+                            <div class=" p-2">
+                                <h3>20x30</h3>
+                                <p>13.80&euro;</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 card">
+                            <div class=" p-2">
+                                <h3>20x30</h3>
+                                <p>13.80&euro;</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 card">
+                            <div class=" p-2">
+                                <h3>20x30</h3>
+                                <p>13.80&euro;</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 card">
+                            <div class=" p-2">
+                                <h3>20x30</h3>
+                                <p>13.80&euro;</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 card">
+                            <div class=" p-2">
+                                <h3>20x30</h3>
+                                <p>13.80&euro;</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 card">
+                            <div class=" p-2">
+                                <h3>20x30</h3>
+                                <p>13.80&euro;</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-2 text-center">
+                        <div class="col-md-6 col-lg-3 card" id="prod21">
+                            <div class=" p-2">
+                                <h3>20x30</h3>
+                                <p>13.80&euro;</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 card" id="prod22">
+                            <div class=" p-2">
+                                <h3>20x30</h3>
+                                <p>13.80&euro;</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 card" id="prod23">
+                            <div class=" p-2">
+                                <h3>20x30</h3>
+                                <p>13.80&euro;</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 card" id="prod24">
+                            <div class=" p-2">
+                                <h3>20x30</h3>
+                                <p>13.80&euro;</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-2 text-center">
+                        <div class="col-12 bg-warning"><h5>BAND 0-20&euro;</h5></div>
+                        <div class="col-md-6 col-lg-3 card">
+                            <div class=" p-2">low value product
+                                <p>13.80&euro;</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 card">
+                            <div class=" p-2">low value product
+                                <p>13.80&euro;</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 card">
+                            <div class=" p-2">low value product
+                                <p>13.80&euro;</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 card">
+                            <div class=" p-2">low value product
+                                <p>13.80&euro;</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 card">
+                            <div class=" p-2">low value product
+                                <p>13.80&euro;</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 card">
+                            <div class=" p-2">low value product
+                                <p>13.80&euro;</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-2 text-center">
+                        <div class="col-md-6 col-lg-3 card">
+                            <div class=" p-2">low value product
+                                <p>13.80&euro;</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 card">
+                            <div class=" p-2">low value product
+                                <p>13.80&euro;</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 card">
+                            <div class=" p-2">low value product
+                                <p>13.80&euro;</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 card">
+                            <div class=" p-2">low value product
+                                <p>13.80&euro;</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 card">
+                            <div class=" p-2">low value product
+                                <p>13.80&euro;</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 card">
+                            <div class=" p-2">low value product
+                                <p>13.80&euro;</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 card">
+                            <div class=" p-2">low value product
+                                <p>13.80&euro;</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var packArr = {
+            "pack-xl": {
+                "ids": '#prod1,#prod2,#prod4,#prod6,#prod7,#prod9,#prod12,#prod23,#prod24',
+                "bgcolor": "#f1bbe8"
+            },
+            "pack-l": {
+                "ids": '#prod1,#prod4,#prod5,#prod7,#prod12,#prod22,#prod23',
+                'bgcolor': '#f1edbb'
+            },
+            "pack-m": {
+                "ids": '#prod2,#prod3,#prod5,#prod10,#prod11,#prod21',
+                'bgcolor': '#c5f1bb'
+            },
+            "pack-s": {
+                "ids": '#prod2,#prod3,#prod8,#prod10,#prod11',
+                'bgcolor': '#bbc9f1'
+            }
+        };
+        $(function () {
+            $('.packs').on('click', function () {
+                var id = $(this).attr('id');
+                var ids = packArr[id].ids;
+                $('div div.card').css({ 'background': '#fff' });
+                $(ids).css({ 'background': packArr[id].bgcolor });
+            })
+        })
+    </script>
+</body>
+
+</html>
