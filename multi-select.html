@@ -48,21 +48,20 @@
             </div>
             <div class="col-lg-9">
                 <div style="text-align: right;background-color: #f8f8f8;" class="p-3"><button class="btn btn-outline-dark">Reset</button> <button class="btn btn-outline-primary">Save</button></div>
-                <div id="chosen"><button class="btn btn-sm btn-warning">Individuelle</button>  <button class="btn btn-sm btn-warning">Individuelle vertical</button> 
- <button class="btn btn-sm bg-warning">Individuelle horizontal pose 02</button>
- <button class="btn btn-sm bg-warning">Carré pose 02</button>
- <button class="btn btn-sm bg-warning">Professeurs horizontal</button>
- <button class="btn btn-sm bg-warning">Fratrie</button></div><hr>
- <div id="not-chosen">
- <button class="btn btn-sm bg-secondary">Individuelle horizontal</button> <button class="btn btn-sm bg-secondary">Individuelle pose 02</button>
+                <div id="chosen" style="display: flex;justify-content: space-between;flex-wrap: wrap;"><button class="btn btn-sm bg-secondary">Individuelle</button>  <button class="btn btn-sm bg-secondary">Individuelle vertical</button> 
+ <button class="btn btn-sm bg-secondary">Individuelle horizontal pose 02</button>
+ <button class="btn btn-sm bg-secondary">Carré pose 02</button>
+ <button class="btn btn-sm bg-secondary">Professeurs horizontal</button>
+ <button class="btn btn-sm bg-secondary">Fratrie</button>
+ <button class="btn btn-sm bg-warning">Individuelle horizontal</button> <button class="btn btn-sm bg-secondary">Individuelle pose 02</button>
  <button class="btn btn-sm bg-secondary">Individuelle vertical pose 02</button>
  <button class="btn btn-sm bg-secondary">Fratrie vertical</button>
  <button class="btn btn-sm bg-secondary">Fratrie horizontal</button>
  <button class="btn btn-sm bg-secondary">Professeurs</button>
  <button class="btn btn-sm bg-secondary">Professeurs pose 02</button>
- <button class="btn btn-sm bg-secondary">Professeurs horizontal pose 02</button>
+ <button class="btn btn-sm bg-warning">Professeurs horizontal pose 02</button>
  <button class="btn btn-sm bg-secondary">Directeur</button>
- <button class="btn btn-sm bg-secondary">Directeur pose 02</button>
+ <button class="btn btn-sm bg-warning">Directeur pose 02</button>
  <button class="btn btn-sm bg-secondary">Directeur horizontal</button>
  <button class="btn btn-sm bg-secondary">Directeur horizontal pose 02</button>
  <button class="btn btn-sm bg-secondary">Carré</button>
@@ -71,7 +70,8 @@
  <button class="btn btn-sm bg-secondary">Groupe 03</button>
  <button class="btn btn-sm bg-secondary">Groupe fun</button> <button class="btn btn-sm bg-secondary">Groupe fun 02</button> <button class="btn btn-sm bg-secondary">Groupe fun 03</button> <button class="btn btn-sm bg-secondary">Panoramique</button> <button class="btn btn-sm bg-secondary">Panoramique 02</button> <button class="btn btn-sm bg-secondary">Groupe portrait</button> <button class="btn btn-sm bg-secondary">Groupe portrait pose 02</button> <button class="btn btn-sm bg-secondary">Groupe portrait fun</button> <button class="btn btn-sm bg-secondary">Groupe portrait fun 02</button> <button class="btn btn-sm bg-secondary">Trombi</button> <button class="btn btn-sm bg-secondary">Trombi pose 02</button> <button class="btn btn-sm bg-secondary">Trombi fun</button> <button class="btn btn-sm bg-secondary">Trombi fun pose 02</button> <button class="btn btn-sm bg-secondary">Groupe ecole</button> <button class="btn btn-sm bg-secondary">Groupe ecole 02</button> <button class="btn btn-sm bg-secondary">Groupe ecole 03</button> <button class="btn btn-sm bg-secondary">Groupe ecole portrait</button> <button class="btn btn-sm bg-secondary">Groupe ecole portrait 02</button> <button class="btn btn-sm bg-secondary">Groupe ecole portrait fun</button> <button class="btn btn-sm bg-secondary">Groupe ecole portrait fun 02</button> <button class="btn btn-sm bg-secondary">TROMBI ecole</button> <button class="btn btn-sm bg-secondary">TROMBI ecole pose 02</button> <button class="btn btn-sm bg-secondary">Absent kid</button> <button class="btn btn-sm bg-secondary">Fond de planche</button> <button class="btn btn-sm bg-secondary">Fond de planche 01</button> <button class="btn btn-sm bg-secondary">Fond de planche 02</button></div>
             </div>
-            <div class="col-lg-4 offset-lg-2 d-none">
+            <div class="col-lg-3">
+            <pre>
                 <select name="tags" id="tags" class="form-control" size="30" multiple onselect="function(){}">
  <option>Individuelle</option>
  <option>Individuelle vertical</option>
@@ -121,7 +121,7 @@
  <option>Fond de planche</option>
  <option>Fond de planche 01</option>
  <option>Fond de planche 02</option>
-                </select>
+                </select></pre>
             </div>
             <div class="col-lg-4">
                 <ul id="tags-list"></ul>
@@ -138,15 +138,21 @@
                 $('ul#tags-list').append('<li>'+m+'</li>');
             })
         });
-        $(document).on('click','#chosen button',function(){
-            var v = $(this).text();
-            $('#not-chosen').append(' <button class="btn btn-sm bg-secondary">'+v+'</button>');
-            $(this).remove();
+        // $(document).on('click','#chosen button',function(){
+        //     var v = $(this).text();
+        //     $('#not-chosen').append(' <button class="btn btn-sm bg-secondary">'+v+'</button>');
+        //     $(this).remove();
+        // })
+        // $(document).on('click','#not-chosen button',function(){
+        //     var v = $(this).text();
+        //     $('#chosen').append(' <button class="btn btn-sm bg-warning">'+v+'</button>');
+        //     $(this).remove();
+        // })
+        $(document).on('click', '#chosen button.bg-secondary', function(){
+            $(this).removeClass('bg-secondary').addClass('bg-warning')
         })
-        $(document).on('click','#not-chosen button',function(){
-            var v = $(this).text();
-            $('#chosen').append(' <button class="btn btn-sm bg-warning">'+v+'</button>');
-            $(this).remove();
+        $(document).on('click', '#chosen button.bg-warning', function(){
+            $(this).removeClass('bg-warning').addClass('bg-secondary')
         })
     })
 </script>
