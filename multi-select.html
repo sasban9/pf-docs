@@ -15,7 +15,7 @@
         integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        #tags-list li{
+        #tags-list li {
             list-style: none;
             display: inline-block;
             font-size: 10pt;
@@ -25,53 +25,122 @@
             margin: 3px 10px;
             padding: 3px
         }
-        .btn-sm{margin-bottom:4px}
-        button.bg-secondary {background-color: #ccc !important;}
+
+        .btn-sm {
+            margin-bottom: 4px
+        }
+
+        button.bg-secondary {
+            background-color: #ccc !important;
+        }
+        .tag-group{display: inline-block; border-bottom:solid 1px; padding:2px 10px;margin-bottom:2px}
     </style>
     <!-- <script src='main.js'></script> -->
 </head>
+
 <body>
     <div class="container">
         <div class="row">
             <div class="col-12 mb-3" style="height:100px;background-color: #eee;"></div>
             <div class="col-lg-3">
-                Available for photos with tag	
+                Available for photos with tag
                 <select name="locations" id="" class="form-control">
                     <optgroup label="BLR">
                         <option value="1">Indiranagar &middot; Bangalore</option>
                         <option value="3">HSR &middot; Bangalore</option>
                     </optgroup>
-                    <optgroup  label="DEL">
+                    <optgroup label="DEL">
                         <option value="2">Hub &middot; Delhi</option>
                     </optgroup>
                 </select>
             </div>
             <div class="col-lg-9">
-                <div style="text-align: right;background-color: #f8f8f8;" class="p-3"><button class="btn btn-outline-dark">Reset</button> <button class="btn btn-outline-primary">Save</button></div>
-                <div id="chosen" style="display: flex;justify-content: space-between;flex-wrap: wrap;"><button class="btn btn-sm bg-secondary">Individuelle</button>  <button class="btn btn-sm bg-secondary">Individuelle vertical</button> 
- <button class="btn btn-sm bg-secondary">Individuelle horizontal pose 02</button>
- <button class="btn btn-sm bg-secondary">Carré pose 02</button>
- <button class="btn btn-sm bg-secondary">Professeurs horizontal</button>
- <button class="btn btn-sm bg-secondary">Fratrie</button>
- <button class="btn btn-sm bg-warning">Individuelle horizontal</button> <button class="btn btn-sm bg-secondary">Individuelle pose 02</button>
- <button class="btn btn-sm bg-secondary">Individuelle vertical pose 02</button>
- <button class="btn btn-sm bg-secondary">Fratrie vertical</button>
- <button class="btn btn-sm bg-secondary">Fratrie horizontal</button>
- <button class="btn btn-sm bg-secondary">Professeurs</button>
- <button class="btn btn-sm bg-secondary">Professeurs pose 02</button>
- <button class="btn btn-sm bg-warning">Professeurs horizontal pose 02</button>
- <button class="btn btn-sm bg-secondary">Directeur</button>
- <button class="btn btn-sm bg-warning">Directeur pose 02</button>
- <button class="btn btn-sm bg-secondary">Directeur horizontal</button>
- <button class="btn btn-sm bg-secondary">Directeur horizontal pose 02</button>
- <button class="btn btn-sm bg-secondary">Carré</button>
- <button class="btn btn-sm bg-secondary">Groupe</button>
- <button class="btn btn-sm bg-secondary">Groupe 02</button>
- <button class="btn btn-sm bg-secondary">Groupe 03</button>
- <button class="btn btn-sm bg-secondary">Groupe fun</button> <button class="btn btn-sm bg-secondary">Groupe fun 02</button> <button class="btn btn-sm bg-secondary">Groupe fun 03</button> <button class="btn btn-sm bg-secondary">Panoramique</button> <button class="btn btn-sm bg-secondary">Panoramique 02</button> <button class="btn btn-sm bg-secondary">Groupe portrait</button> <button class="btn btn-sm bg-secondary">Groupe portrait pose 02</button> <button class="btn btn-sm bg-secondary">Groupe portrait fun</button> <button class="btn btn-sm bg-secondary">Groupe portrait fun 02</button> <button class="btn btn-sm bg-secondary">Trombi</button> <button class="btn btn-sm bg-secondary">Trombi pose 02</button> <button class="btn btn-sm bg-secondary">Trombi fun</button> <button class="btn btn-sm bg-secondary">Trombi fun pose 02</button> <button class="btn btn-sm bg-secondary">Groupe ecole</button> <button class="btn btn-sm bg-secondary">Groupe ecole 02</button> <button class="btn btn-sm bg-secondary">Groupe ecole 03</button> <button class="btn btn-sm bg-secondary">Groupe ecole portrait</button> <button class="btn btn-sm bg-secondary">Groupe ecole portrait 02</button> <button class="btn btn-sm bg-secondary">Groupe ecole portrait fun</button> <button class="btn btn-sm bg-secondary">Groupe ecole portrait fun 02</button> <button class="btn btn-sm bg-secondary">TROMBI ecole</button> <button class="btn btn-sm bg-secondary">TROMBI ecole pose 02</button> <button class="btn btn-sm bg-secondary">Absent kid</button> <button class="btn btn-sm bg-secondary">Fond de planche</button> <button class="btn btn-sm bg-secondary">Fond de planche 01</button> <button class="btn btn-sm bg-secondary">Fond de planche 02</button></div>
+                <div style="text-align: right;background-color: #f8f8f8;" class="p-3">
+                    <button class="btn btn-outline-dark">Reset</button> <button
+                        class="btn btn-outline-primary">Save</button>
+                </div>
+                <div id="chosen" style="display: flex;justify-content: space-between;flex-wrap: wrap;">
+                    <div class="tag-group">
+                        <button class="btn btn-sm bg-secondary">Absent kid</button>
+                    </div>
+                    <div class="tag-group">
+                        <button class="btn btn-sm bg-secondary" title="Carré">C</button>
+                        <button class="btn btn-sm bg-secondary" title="Carré pose 02">C2</button>
+                    </div>
+                    <div class="tag-group">
+                        <button class="btn btn-sm bg-secondary" title="Directeur">D</button>
+                        <button class="btn btn-sm bg-warning" title="Directeur pose 02">D2</button>
+                        <button class="btn btn-sm bg-secondary" title="Directeur horizontal">DH</button>
+                        <button class="btn btn-sm bg-secondary" title="Directeur horizontal pose 02">DH2</button>
+                    </div>
+                    <div class="tag-group">
+                        <button class="btn btn-sm bg-secondary" title="Fratrie">F</button>
+                        <button class="btn btn-sm bg-secondary" title="Fratrie horizontal">FH</button>
+                        <button class="btn btn-sm bg-secondary" title="Fratrie vertical">FV</button>
+                    </div>
+                    <div class="tag-group">
+                        <button class="btn btn-sm bg-secondary" title="Fond de planche">FdP</button>
+                        <button class="btn btn-sm bg-secondary" title="Fond de planche 01">FdP1</button>
+                        <button class="btn btn-sm bg-secondary" title="Fond de planche 02">FdP2</button>
+                    </div>
+                    <div class="tag-group">
+                        <button class="btn btn-sm bg-secondary" title="Groupe">G</button>
+                        <button class="btn btn-sm bg-secondary" title="Groupe 02">G2</button>
+                        <button class="btn btn-sm bg-secondary" title="Groupe 03">G3</button>
+                    </div>
+                    <div class="tag-group">
+                        <button class="btn btn-sm bg-secondary" title="Groupe ecole">Ge</button>
+                        <button class="btn btn-sm bg-secondary" title="Groupe ecole 02">Ge2</button>
+                        <button class="btn btn-sm bg-secondary" title="Groupe ecole 03">Ge3</button>
+                    </div>
+                    <div class="tag-group">
+                        <button class="btn btn-sm bg-secondary" title="Groupe fun">Gf</button>
+                        <button class="btn btn-sm bg-secondary" title="Groupe fun 02">Gf2</button>
+                        <button class="btn btn-sm bg-secondary" title="Groupe fun 03">Gf3</button>
+                    </div>
+                    <div class="tag-group">
+                        <button class="btn btn-sm bg-secondary" title="Groupe portrait">Gp</button>
+                        <button class="btn btn-sm bg-secondary" title="Groupe portrait pose 02">Gp2</button>
+                        <button class="btn btn-sm bg-secondary" title="Groupe portrait fun">Gpf</button>
+                        <button class="btn btn-sm bg-secondary" title="Groupe portrait fun 02">Gpf2</button>
+                    </div>
+                    <div class="tag-group">
+                        <button class="btn btn-sm bg-secondary" title="Groupe ecole portrait">Gep</button>
+                        <button class="btn btn-sm bg-secondary" title="Groupe ecole portrait 02">Gep2</button>
+                        <button class="btn btn-sm bg-secondary" title="Groupe ecole portrait fun">Gepf</button>
+                        <button class="btn btn-sm bg-secondary" title="Groupe ecole portrait fun 02">Gepf2</button>
+                    </div>
+                    <div class="tag-group">
+                        <button class="btn btn-sm bg-secondary" data-bs-toggle="tooltip" title="Individuelle">I</button>
+                        <button class="btn btn-sm bg-secondary" title="Individuelle pose 02">I2</button>
+                        <button class="btn btn-sm bg-warning" title="Individuelle horizontal">IH</button>
+                        <button class="btn btn-sm bg-secondary" title="Individuelle horizontal">IH2</button>
+                        <button class="btn btn-sm bg-secondary" title="Individuelle vertical">IV</button>
+                        <button class="btn btn-sm bg-secondary" title="Individuelle vertical pose 02">IV2</button>
+                    </div>
+                    <div class="tag-group">
+                        <button class="btn btn-sm bg-secondary" title="Professeurs">P</button>
+                        <button class="btn btn-sm bg-secondary" title="Professeurs pose 02">P2</button>
+                        <button class="btn btn-sm bg-secondary" title="Professeurs horizontal">PH</button>
+                        <button class="btn btn-sm bg-warning" title="Professeurs horizontal pose 02">PH2</button>
+                    </div>
+                    <div class="tag-group">
+                        <button class="btn btn-sm bg-secondary" title="Panoramique">Pano</button>
+                        <button class="btn btn-sm bg-secondary" title="Panoramique 02">Pano2</button>
+                        <button class="btn btn-sm bg-secondary" title="Panoramique 03">Pano3</button>
+                    </div>
+                    <div class="tag-group">
+                        <button class="btn btn-sm bg-secondary" title="Trombi">Tr</button>
+                        <button class="btn btn-sm bg-secondary" title="Trombi pose 02">Tr2</button>
+                        <button class="btn btn-sm bg-secondary" title="TROMBI ecole">TrE</button>
+                        <button class="btn btn-sm bg-secondary" title="TROMBI ecole pose 02">TrE2</button>
+                        <button class="btn btn-sm bg-secondary" title="Trombi fun">TrF</button>
+                        <button class="btn btn-sm bg-secondary" title="Trombi fun pose 02">TrF2</button>
+                    </div>
+                </div>
             </div>
             <div class="col-lg-3">
-            <pre>
+                <pre>
                 <select name="tags" id="tags" class="form-control" size="30" multiple onselect="function(){}">
  <option>Individuelle</option>
  <option>Individuelle vertical</option>
@@ -131,11 +200,11 @@
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
-    $(function(){
-        $('#tags').change(function(){
+    $(function () {
+        $('#tags').change(function () {
             $('ul#tags-list').empty();
-            $(this).val().forEach(function(m, i){
-                $('ul#tags-list').append('<li>'+m+'</li>');
+            $(this).val().forEach(function (m, i) {
+                $('ul#tags-list').append('<li>' + m + '</li>');
             })
         });
         // $(document).on('click','#chosen button',function(){
@@ -148,12 +217,13 @@
         //     $('#chosen').append(' <button class="btn btn-sm bg-warning">'+v+'</button>');
         //     $(this).remove();
         // })
-        $(document).on('click', '#chosen button.bg-secondary', function(){
+        $(document).on('click', '#chosen button.bg-secondary', function () {
             $(this).removeClass('bg-secondary').addClass('bg-warning')
         })
-        $(document).on('click', '#chosen button.bg-warning', function(){
+        $(document).on('click', '#chosen button.bg-warning', function () {
             $(this).removeClass('bg-warning').addClass('bg-secondary')
         })
     })
 </script>
+
 </html>
