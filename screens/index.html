@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Products - pixfirst.com</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta property="og:image" content="https://sasban9.github.io/pf-docs/img/pf-packs.png">
+    <meta property="og:title" content="Our Products :: PixFirst">
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        h3{background: #333; color: white;padding:1rem}
+        div img{max-width: 100%;}
+        .small{font-size:0.6em;color:cyan}
+    </style>
+    <!-- <script src='main.js'></script> -->
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h3>ALL PHOTOS VIEW <span class="small">jun 2023</span></h3>
+                <img src="all-photos-in-folder.png" alt="">
+                <h3>ALBUM VIEW <span class="small">jun 2023</span></h3>
+                <img src="folder-view.png" alt="">
+                <h3>ALBUM VIEW <span class="small">may 2023</span></h3>
+                <img src="album-view.png" alt="">
+                <h3>ACCESS CARDS VIEW <span class="small">may 2023</span></h3>
+                <img src="access-cards.png" alt="">
+                <h3>AGENCY :: QUICK LINKS <span class="small">mar 2023</span></h3>
+                <img src="quick-links.png" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $(function(){
+        $('#tags').change(function(){
+            $('ul#tags-list').empty();
+            $(this).val().forEach(function(m, i){
+                $('ul#tags-list').append('<li>'+m+'</li>');
+            })
+        });
+        // $(document).on('click','#chosen button',function(){
+        //     var v = $(this).text();
+        //     $('#not-chosen').append(' <button class="btn btn-sm bg-secondary">'+v+'</button>');
+        //     $(this).remove();
+        // })
+        // $(document).on('click','#not-chosen button',function(){
+        //     var v = $(this).text();
+        //     $('#chosen').append(' <button class="btn btn-sm bg-warning">'+v+'</button>');
+        //     $(this).remove();
+        // })
+        $(document).on('click', '#chosen button.bg-secondary', function(){
+            $(this).removeClass('bg-secondary').addClass('bg-warning')
+        })
+        $(document).on('click', '#chosen button.bg-warning', function(){
+            $(this).removeClass('bg-warning').addClass('bg-secondary')
+        })
+    })
+</script>
+</html>
