@@ -25,6 +25,10 @@
         p{margin: 0;}
         .flext{display: flex; justify-content: space-between;border-bottom: 1px solid #ccc;}
         .flext div{flex-basis: 0;flex-grow:1;text-align: right;padding-bottom:16px}
+        #table-networth:not(.transpose) tr:nth-child(2) {background-color: gold;}
+        #table-networth:not(.transpose) tr:nth-child(3) {background-color: gold;}
+        #table-networth.transpose tr td:nth-child(2),#table-networth.transpose tr th:nth-child(2){background-color: gold;}
+        #table-networth.transpose tr td:nth-child(3),#table-networth.transpose tr th:nth-child(3){background-color: gold;}
     </style>
 </head>
 
@@ -350,14 +354,15 @@
                     </div>
                 </div>
             </table>
+            <div style="height:300px;width:100%"></div>
             <h2>NETWORTH 2023</h2>
             <a href="#" id="transpose-networth-table">Transpose</a>
             <table class="table" id="table-networth">
                 <tr>
-                    <th style="background: black; color: white;">2023</th><th>Jan</th><th>Feb</th><th>Mar</th><th>Apr</th><th>May</th><th>Jun</th><th>Jul</th><th>Aug</th><th>Sep</th><th>Oct</th><th>Nov</th><th>Dec</th>
+                    <th style="background: black; color: white;">2023</th><th>Jan</th><th>Feb</th><th>Mar</th><th>Apr</th><th>May</th><th>Jun</th><th>Jul</th><th>Aug</th><th>Sep</th><th>Oct</th><th>Nov</th><th>Dec</th><th>TOTAL</th>
                 </tr>
                 <tr style="background: gold;">
-                    <th><i class="fa-solid fa-money-bill-1-wave"></i><i class="fa-solid fa-jet-fighter"></i> Salary (+)</th><td>91</td><td>135</td><td>135</td><td>135</td><td>135</td><td>135</td><td>135</td><td>135</td><td>135</td><td>135</td><td>135</td><td>135</td>
+                    <th><i class="fa-solid fa-money-bill-1-wave"></i><i class="fa-solid fa-jet-fighter"></i> Salary (+)</th><td>91</td><td>135</td><td>135</td><td>135</td><td>135</td><td>135</td><td>135</td><td>135</td><td>135</td><td>135</td><td>135</td><td>135</td><th>1576</th>
                 </tr>
                 <tr style="background: gold;">
                     <th><i class="fa-solid fa-people-robbery"></i> Loans (+)</th><td>33</td><td>122</td><td></td><td><span title=" (land sale)">336</span></td><td>294</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
@@ -369,7 +374,7 @@
                     <th>(-) EMI <i class="fa-solid fa-angles-left"></i></th><td>40</td><td>40</td><td>40</td><td>50</td><td>50</td><td>50</td><td>50</td><td>50</td><td>50</td><td>50</td><td>50</td><td>50</td>
                 </tr>
                 <tr>
-                    <th>(-) Rest <i class="fa-solid fa-angles-left"></i></th><td><span title="Lawyer">50</span></td><td>23</td><td>19</td><td><span title="didi">40</span> <br><span title="ghuss">20</span></td><td>40 (didi)<br>40 (mithun) <br>35(scaler) <br>12 (lawyer)</td><td><span title="didi">40</span><br><span title="mithun">40</span></td><td><span title="mithun">40</span></td>
+                    <th>(-) Rest <i class="fa-solid fa-angles-left"></i></th><td><span title="Lawyer">50</span></td><td>23</td><td>19</td><td><span title="didi">40</span> <br><span title="ghuss">20</span></td><td><span title="didi">40</span><br><span title="mithun">40</span><br><span title="scaler">35</span><br><span title="lawyer">12</span></td><td><span title="didi">40</span><br><span title="mithun">40</span></td><td><span title="didi">40</span><br><span title="mithun">40</span></td><td><span title="mithun">40</span></td>
                 </tr>
                 <tr style="background: thistle;">
                     <th>NETWORTH</th><th>817</th><th>926</th><th>891</th><th>1147</th><th>1309</th>
@@ -385,6 +390,7 @@
         $("#transpose-networth-table").click(function(){
             $("#table-networth").each(function() {
                 var $this = $(this);
+                $this.toggleClass('transpose');
                 var newrows = [];
                 $this.find("tr").each(function(){
                     var i = 0;
