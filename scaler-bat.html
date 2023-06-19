@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>All birthdays</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name="description" content="Email template redesign for photographers">
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .bg-warning td, .bg-warning th{background-color: tomato;}
+    </style>
+  
+    <!-- <script src='main.js'></script> -->
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            
+            <div class="col-12">
+                Arrays
+                <code><pre>
+&lt;?php
+    // Do not write code to include libraries, main() function or accept any input from the console.
+    // Initialization code is already written and hidden from you. Do not write code for it again.
+    /**
+    * @input $a -> array of integers
+    */
+    // return an integer //
+    
+    function solve($a){
+        // Just write your code below to complete the function. Required input is available to you as the function arguments.
+        // Do not print the result or any output. Just return the result via this function.
+        // WRITE YOUR CODE HERE
+        $max_even = -INF;
+        $min_odd = INF;
+        for($i=0; $i&lt;sizeof($a); $i++){
+            if($a[$i]%2 == 0 && $a[$i] > $max_even)$max_even = $a[$i];
+            if($a[$i]%2 != 0 && $a[$i] &lt; $min_odd)$min_odd = $a[$i];
+        }
+        return $max_even-$min_odd;
+    }
+?>
+                </pre></code>
+                <hr>Arrays
+                <code>
+                    <pre>
+&lt;?php
+    // Do not write code to include libraries, main() function or accept any input from the console.
+    // Initialization code is already written and hidden from you. Do not write code for it again.
+    /**
+    * @input $a -> array of integers
+    * @input $b -> integer
+    */
+    // return an integer //
+ 
+    function solve($a, $b){
+        // Just write your code below to complete the function. Required input is available to you as the function arguments.
+        // Do not print the result or any output. Just return the result via this function.
+        //WRITE YOUR CODE HERE
+        $pair_count = 0;
+        for ($i=0; $i&lt;sizeof($a); $i++){
+            for ($j=$i+1; $j&lt;sizeof($a); $j++){
+                if($a[$i]+$a[$j] == $b)$pair_count++;
+            }
+        }
+        return $pair_count;
+    }
+?>
+                    </pre>
+                </code>
+                <hr>
+                Binary Search
+                <code>
+                    <pre>
+public class Solution {
+    // Do not write code to include libraries, main() function or accept any input from the console.
+    // Initialization code is already written and hidden from you. Do not write code for it again.
+    public long pow(long A, long B, long C) {
+        // Just write your code below to complete the function. Required input is available to you as the function arguments.
+        // Do not print the result or any output. Just return the result via this function.
+        long res = 1;
+        if(B==0)return (1+C)%C;
+        while(B>0){
+            if((B & 1)==1){
+                res = (res * A + C)%C;
+            }
+            A = (A * A + C)%C;
+            B >>= 1;
+        }
+        return res;
+    }
+}
+                    </pre>
+                </code>
+                <hr>
+                Hashing
+                <code>
+                    <pre>
+// Do not write code to include libraries, main() function or accept any input from the console.
+// Initialization code is already written and hidden from you. Do not write code for it again.
+module.exports = { 
+ //param A : array of integers
+ //return an integer
+  solve : function(A){
+        // Just write your code below to complete the function. Required input is available to you as the function arguments.
+        // Do not print the result or any output. Just return the result via this function.
+        const sumSet = new Set();
+        let sum=0;
+        for(let i=0; i&lt;A.length; i++){
+            sum += A[i]
+            if(sum===0 || sumSet.has(sum))
+                return 1;
+            sumSet.add(sum);
+        }
+        return 0;
+  }
+};
+ 
+                    </pre>
+                </code>
+                <hr>
+                Hashing
+                <code>
+                    <pre>
+// Do not write code to include libraries, main() function or accept any input from the console.
+// Initialization code is already written and hidden from you. Do not write code for it again.
+module.exports = { 
+    //param A : array of integers
+    //param B : array of integers
+    //return a array of integers
+    solve : function(A, B){
+        // Just write your code below to complete the function. Required input is available to you as the function arguments.
+        // Do not print the result or any output. Just return the result via this function.
+        A.sort((a,b) => a-b);
+        B.sort((a,b) => a-b);
+        var common = [];
+        
+        var i=0, j=0;
+        while(i&lt;A.length && j&lt;B.length){
+            if(A[i] == B[j]){
+                common.push(A[i]);
+                i++;
+                j++;
+            }
+            else if(A[i] &lt; B[j]){
+                i++;
+            } else {
+                j++;
+            }
+        }
+        return common;
+    }
+};
+                         
+                    </pre>
+                </code>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
