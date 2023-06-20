@@ -17,6 +17,8 @@
         .bg-warning td, .bg-warning th{background-color: tomato;}
         /* code{display: none;} */
         pre{color:tomato}
+        .alert-danger{background-color: #fdd;}
+        .col-lg-6{border-bottom: 2px solid;}
     </style>
   
     <!-- <script src='main.js'></script> -->
@@ -25,9 +27,10 @@
 <body>
     <div class="container">
         <div class="row">
-            
-            <div class="col-12">
-                <button onclick="clearComments()">Hide comments</button><br>
+            <div class="col-12" style="text-align: right;">
+                <button onclick="clearComments()">Hide comments</button>
+            </div>
+            <div class="col-lg-6">
                 Arrays
                 <pre>
 &lt;?php
@@ -44,14 +47,18 @@
         $max_even = -INF;
         $min_odd = INF;
         for($i=0; $i&lt;sizeof($a); $i++){
-            if($a[$i]%2 == 0 && $a[$i] > $max_even)$max_even = $a[$i];
-            if($a[$i]%2 != 0 && $a[$i] &lt; $min_odd)$min_odd = $a[$i];
+            if($a[$i]%2 == 0 && $a[$i] > $max_even)
+                $max_even = $a[$i];
+            if($a[$i]%2 != 0 && $a[$i] &lt; $min_odd)
+                $min_odd = $a[$i];
         }
         return $max_even-$min_odd;
     }
 ?>
                 </pre>
-                <hr>Arrays
+            </div>
+            <div class="col-lg-6 alert-danger">
+                Arrays
                 
                     <pre>
 &lt;?php
@@ -77,8 +84,9 @@
     }
 ?>
                     </pre>
+                </div>
+                <div class="col-lg-6">
                 
-                <hr>
                 Binary Search
                 
                     <pre>
@@ -102,7 +110,9 @@ public class Solution {
 }
                     </pre>
                 
-                <hr>
+                
+                </div>
+                <div class="col-lg-6 alert-danger">
                 Hashing
                 
                     <pre>
@@ -128,7 +138,9 @@ module.exports = {
  
                     </pre>
                 
-                <hr>
+                
+                </div>
+                <div class="col-lg-6">
                 Hashing
                 
                     <pre>
