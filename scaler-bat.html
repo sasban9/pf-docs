@@ -14,13 +14,30 @@
         integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        .bg-warning td, .bg-warning th{background-color: tomato;}
+        .bg-warning td,
+        .bg-warning th {
+            background-color: tomato;
+        }
+
         /* code{display: none;} */
-        pre{color:tomato}
-        .alert-danger{background-color: #fdd;}
-        .col-lg-6{border-bottom: 2px solid;}
+        pre {
+            color: tomato
+        }
+
+        .alert-danger {
+            background-color: #fdd;
+        }
+
+        .col-lg-6 {
+            border-bottom: 2px solid;
+        }
+
+        h4.d-flex {
+            display: flex;
+            justify-content: space-between;
+        }
     </style>
-  
+
     <!-- <script src='main.js'></script> -->
 </head>
 
@@ -31,7 +48,7 @@
                 <button onclick="clearComments()">Hide comments</button>
             </div>
             <div class="col-lg-6">
-                Arrays
+                <h4 class="d-flex"><span>Arrays</span><span>PHP</span></h4>
                 <pre>
 &lt;?php
 <code>// Do not write code to include libraries, main() function or accept any input from the console.
@@ -58,9 +75,9 @@
                 </pre>
             </div>
             <div class="col-lg-6 alert-danger">
-                Arrays
-                
-                    <pre>
+                <h4 class="d-flex"><span>Arrays</span><span>PHP</span></h4>
+
+                <pre>
 &lt;?php
     <code>// Do not write code to include libraries, main() function or accept any input from the console.
     // Initialization code is already written and hidden from you. Do not write code for it again.
@@ -84,12 +101,12 @@
     }
 ?>
                     </pre>
-                </div>
-                <div class="col-lg-6">
-                
-                Binary Search
-                
-                    <pre>
+            </div>
+            <div class="col-lg-6">
+                <h4 class="d-flex"><span>Binary Search</span><span>Java</span></h4>
+
+
+                <pre>
 public class Solution {
     <code>// Do not write code to include libraries, main() function or accept any input from the console.
     // Initialization code is already written and hidden from you. Do not write code for it again.</code>
@@ -109,13 +126,14 @@ public class Solution {
     }
 }
                     </pre>
-                
-                
-                </div>
-                <div class="col-lg-6 alert-danger">
-                Hashing
-                
-                    <pre>
+
+
+            </div>
+            <div class="col-lg-6 alert-danger">
+                <h4 class="d-flex"><span>Hashing</span><span>Javascript</span></h4>
+
+
+                <pre>
 <code>// Do not write code to include libraries, main() function or accept any input from the console.
 // Initialization code is already written and hidden from you. Do not write code for it again.</code>
 module.exports = { 
@@ -137,13 +155,14 @@ module.exports = {
 };
  
                     </pre>
-                
-                
-                </div>
-                <div class="col-lg-6">
-                Hashing
-                
-                    <pre>
+
+
+            </div>
+            <div class="col-lg-6">
+                <h4 class="d-flex"><span>Hashing</span><span>Javascript</span></h4>
+
+
+                <pre>
 <code>// Do not write code to include libraries, main() function or accept any input from the console.
 // Initialization code is already written and hidden from you. Do not write code for it again.</code>
 module.exports = { 
@@ -175,19 +194,18 @@ module.exports = {
 };
                          
                     </pre>
-                
+
             </div>
         </div>
     </div>
-<script>
-    function clearComments() {
-        var element = document.getElementsByTagName("code")
-        for (index = element.length - 1; index >= 0; index--)
-        {
-            element[index].parentNode.removeChild(element[index]);
+    <script>
+        function clearComments() {
+            var element = document.getElementsByTagName("code")
+            for (index = element.length - 1; index >= 0; index--) {
+                element[index].parentNode.removeChild(element[index]);
+            }
         }
-    }
-</script>
+    </script>
 </body>
 
 </html>
