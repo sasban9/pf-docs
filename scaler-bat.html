@@ -92,8 +92,8 @@
         // Do not print the result or any output. Just return the result via this function.
         //WRITE YOUR CODE HERE</code>
         $pair_count = 0;
-        for ($i=0; $i&lt;sizeof($a); $i++){
-            for ($j=$i+1; $j&lt;sizeof($a); $j++){
+        for ($i=0; $i < sizeof($a); $i++){
+            for ($j=$i+1; $j < sizeof($a); $j++){
                 if($a[$i]+$a[$j] == $b)$pair_count++;
             }
         }
@@ -144,7 +144,7 @@ module.exports = {
         // Do not print the result or any output. Just return the result via this function.</code>
         const sumSet = new Set();
         let sum=0;
-        for(let i=0; i&lt;A.length; i++){
+        for(let i=0; i < A.length; i++){
             sum += A[i]
             if(sum===0 || sumSet.has(sum))
                 return 1;
@@ -177,13 +177,13 @@ module.exports = {
         var common = [];
         
         var i=0, j=0;
-        while(i&lt;A.length && j&lt;B.length){
+        while(i < A.length && j < B.length){
             if(A[i] == B[j]){
                 common.push(A[i]);
                 i++;
                 j++;
             }
-            else if(A[i] &lt; B[j]){
+            else if(A[i] < B[j]){
                 i++;
             } else {
                 j++;
