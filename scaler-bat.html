@@ -30,13 +30,17 @@
 
         .col-lg-6 {
             border-bottom: 2px solid;
+            padding: 16px;
         }
 
         h4.d-flex {
             display: flex;
             justify-content: space-between;
         }
-        h4 span:nth-of-type(2){color:tomato}
+
+        h4 span:nth-of-type(2) {
+            color: tomato
+        }
     </style>
 
     <!-- <script src='main.js'></script> -->
@@ -45,8 +49,8 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-12" style="text-align: right;">
-                <button onclick="clearComments()">Hide comments</button>
+            <div class="col-12" style="text-align: right;margin:16px 0;">
+                <button class="btn btn-primary" onclick="clearComments()">Hide comments</button>
             </div>
             <div class="col-lg-6">
                 <h4 class="d-flex"><span>Arrays</span><span>PHP</span></h4>
@@ -74,7 +78,7 @@
         return $max_even-$min_odd;
     }
 ?>
-                </pre>
+</pre>
             </div>
             <div class="col-lg-6 alert-danger">
                 <h4 class="d-flex"><span>Arrays</span><span>PHP</span></h4>
@@ -87,8 +91,7 @@
     * @input $a -> array of integers
     * @input $b -> integer
     */
-    // return an integer //</code>
- 
+    // return an integer //</code>    
     function solve($a, $b){
         <code>// Just write your code below to complete the function. Required input is available to you as the function arguments.
         // Do not print the result or any output. Just return the result via this function.
@@ -102,7 +105,7 @@
         return $pair_count;
     }
 ?>
-                    </pre>
+</pre>
             </div>
             <div class="col-lg-6">
                 <h4 class="d-flex"><span>Binary Search</span><span>Java</span></h4>
@@ -127,7 +130,7 @@ public class Solution {
         return res;
     }
 }
-                    </pre>
+</pre>
 
 
             </div>
@@ -135,7 +138,7 @@ public class Solution {
                 <h4 class="d-flex"><span>Hashing</span><span>Javascript</span></h4>
                 <p>Return 1 if sum of elements is 0, else return 0</p>
 
-<pre>
+                <pre>
 module.exports = { 
 <code>// Do not write code to include libraries, main() function or accept any input from the console.
 // Initialization code is already written and hidden from you. Do not write code for it again.</code>
@@ -155,14 +158,10 @@ module.exports = {
         return 0;
   }
 };
- 
-                    </pre>
-
-
+</pre>
             </div>
             <div class="col-lg-6">
                 <h4 class="d-flex"><span>Hashing</span><span>Javascript</span></h4>
-
                 <p>Find all common elements in two arrays</p>
                 <pre>
 <code>// Do not write code to include libraries, main() function or accept any input from the console.
@@ -194,8 +193,7 @@ module.exports = {
         return common;
     }
 };
-                         
-                    </pre>
+</pre>
 
             </div>
         </div>
