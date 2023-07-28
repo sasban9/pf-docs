@@ -14,6 +14,11 @@
         integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
+        div img {
+            max-width: 100%;
+            margin-bottom: 20px;
+        }
+
         .bg-warning td,
         .bg-warning th {
             background-color: tomato;
@@ -49,6 +54,14 @@
 <body>
     <div class="container">
         <div class="row">
+            <div class="col-md-4 offset-md-4 col-lg-2 offset-lg-5" style="text-align: center;">
+                <br>
+               <button class="btn btn-primary" onclick="choosePic()">Roll Dice</button> <br><br><img id="myPicture" />
+            </div>
+            <div class="col-md-3 col-lg-2"><img src="" alt=""></div>
+            <div class="col-md-3 col-lg-2"><img src="" alt=""></div>
+            <div class="col-md-3 col-lg-2"><img src="" alt=""></div>
+
             <div class="col-12" style="text-align: right;margin:16px 0;">
                 <button class="btn btn-primary" onclick="clearComments()">Hide comments</button>
             </div>
@@ -206,6 +219,15 @@ module.exports = {
                 element[index].parentNode.removeChild(element[index]);
             }
         }
+        window.onload = choosePic;
+
+        var myPix = new Array("https://www.vegrecipesofindia.com/wp-content/uploads/2020/11/puri.jpg", "https://s3.envato.com/files/374513902/DSC_2611.jpg", "https://www.veganricha.com/wp-content/uploads/2023/03/Aloo-Paratha-7121.jpg", "https://www.mygingergarlickitchen.com/wp-content/uploads/2017/09/Steamed-Veg-Momos-With-Spicy-Chili-Chutney-5.jpg", "https://www.cookingcarnival.com/wp-content/uploads/2021/04/Instant-dosa-1.jpg", "https://www.cubesnjuliennes.com/wp-content/uploads/2018/12/Chicken-Fry-Recipe.jpg", "https://resize.elle.fr/original/var/plain_site/storage/images/elle-a-table/recettes-de-cuisine/naans-et-poulet-au-curry-3896971/94242826-1-fre-FR/Naans-et-poulet-au-curry.jpg", "https://feelgoodfoodie.net/wp-content/uploads/2018/05/Beef-Shawarma-Wrap-7-1.jpg", "https://greenbowl2soul.com/wp-content/uploads/2019/11/veg-chow-mein-1.jpg", "https://cafedelites.com/wp-content/uploads/2017/03/One-Pot-Creamy-Mushroom-White-Wine-Chicken-Pasta-33.jpg", "https://www.indianhealthyrecipes.com/wp-content/uploads/2023/03/veggie-burger-recipe.jpg.webp", "https://www.indianhealthyrecipes.com/wp-content/uploads/2015/10/pizza-recipe-2.jpg.webp");
+
+        function choosePic() {
+            
+            document.getElementById("myPicture").src = myPix[Math.floor(Math.random() * myPix.length)];
+        }
+
     </script>
 </body>
 
