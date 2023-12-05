@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixFirst - Changed Files</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <style>
+        tr{background: wheat;}
+        tr:nth-child(2n){background: aliceblue;}
+        td{min-width: 240px;padding-right:100px}
+    </style>
+</head>
+<body>
+    <table class="table">
+        <tr>
+            <td>.gitignore</td>
+        </tr>
+        <tr>
+            <td colspan="2">README</td>
+        </tr>
+        <tr>
+            <td>apps/local/accounts/migrations/</td>
+            <td>
+                0513_useraddress_default_field_addition.py <br>
+                0514_user_address_additional_fields.py <br>
+                0517_user_address_update_basetable.py <br>
+                0519_secondary_phone_addition_addressbase.py <br>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                apps/local/accounts/models.py <br>apps/local/accounts/views/main.py <br>
+
+                apps/local/api/photographers/handlers/api_v50.py <br>
+                apps/local/api/photographers/handlers/events/api_v3.py <br>
+                apps/local/api/photographers/handlers/events/api_v41.py <br>
+                apps/local/api/utils/auto_tagging.py <br>
+                apps/local/api/v6/mixins/drf_custom_search_filters.py <br>
+                apps/local/api/v6/router.py <br>
+            </td>
+        </tr>
+        <tr>
+            <td>apps/local/api/v6/serializers/</td>
+            <td>
+                <table>
+                    <tr>
+                        <td>custom_validators/</td>
+                        <td>custom_validator_functions.py <br>
+                            org_functions.py <br>
+                            provider_functions.py <br>
+                            utility_functions.py <br>
+                            </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">ordered_product/__init__.py <br>
+                            ordered_product/ordered_product.py <br></td>
+                    </tr>
+                    <tr>
+                        <td>orgs/</td>
+                        <td>
+                            base_org.py <br>
+                            events.py <br>
+                            offers.py <br>
+                            orders.py <br>
+                            orgs.py <br>
+                            print_jobs.py <br></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            photographers/photographers.py <br>
+                            products_report/products_report.py <br>
+                            provider/__init__.py <br>
+                            provider/provider.py <br></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>apps/local/api/v6/views/</td>
+            <td>
+                ordered_product/__init__.py <br>
+                ordered_product/ordered_product.py <br>
+                orgs/base_org.py <br>
+                orgs/events.py <br>
+                orgs/offers.py <br>
+                orgs/orders.py <br>
+                orgs/orgs.py <br>
+                orgs/print_jobs.py <br>
+                orgs/settings.py <br>
+                photographers/photographers.py <br>
+                pricelist/pricelist.py <br>
+                products/products.py <br>
+                products_report/products_report.py <br>
+                provider/__init__.py <br>
+                provider/provider.py <br>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+
+                apps/local/iadmin/lib/invoice/invoicer.py <br>
+                apps/local/iadmin/lib/invoicing.py <br>
+                apps/local/iadmin/templates/admin/orders/orgorder_details.html<br>
+                apps/local/iadmin/templates/admin/report/reports.html<br></td>
+        </tr>
+        <tr>
+            <td>apps/local/iadmin/templates/iadmin/</td>
+            <td>
+                invoices/photographer_orgs_invoice_domain_monthly_lestudio_v1.html<br>
+                invoices/photographer_orgs_invoice_domain_monthly_test.html<br>
+                invoices/photographer_orgs_invoice_domain_monthly_v1.html<br>
+                invoices/photographer_orgs_invoice_manual_v1.html<br>
+                invoices/photographer_orgs_invoice_manual_v2.html<br>
+                invoices/photographer_orgs_invoice_manual_v2_lestudio.html<br>
+                invoices/photographer_orgs_invoice_v1.html<br>
+                invoices/photographer_orgs_invoice_v1_lestudio.html<br>
+                invoices/school_org_invoice_v1.html<br>
+                v2/active_org_action.html<br>
+                v2/generate_monthly_domain_invoice.html<br>
+                v2/generate_school_invoice.html<br>
+                v2/invoices.html<br>
+                v2/org_payment_logs.html<br></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+
+                apps/local/iadmin/urls.py <br>
+                apps/local/iadmin/views/backup.py <br>
+                apps/local/iadmin/views/orders.py <br>
+                apps/local/iadmin/views/organization.py <br></td>
+        </tr>
+        <tr>
+            <td>apps/local/icustomer/</td>
+            <td>templates/customer/access_photos.html<br>
+                templates/customer/blocks/cart/cart_item_list.html<br>
+                templates/customer/blocks/header.bottom.html<br>
+                templates/customer/invoices/formatted_invoice_for_download.html<br>
+                templates/customer/issues/issues_data.html<br>
+                templates/customer/purchase/cart.html<br>
+                templates/customer/purchase/emails/purchased_email_to_customer_on_cash_payment.html<br>
+                views/album.py <br>
+                views/cart.py <br>
+                views/dev.py <br>
+                views/faq.py <br>
+                views/main.py <br>
+                views/orgs.py <br>
+                views/payments/paypal_ipn.py <br>
+                views/profile.py <br></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                apps/local/iphotographer/forms/no_lab.py <br>
+                apps/local/iphotographer/forms/org.py <br>
+                apps/local/iphotographer/lib/pixzen.py <br>
+<hr>
+                apps/local/iphotographer/templates/iphotographer/emails/album_all_photos_uploaded_email_for_customer_v2.html<br>
+                apps/local/iphotographer/templates/iphotographer/emails/fr/album_all_photos_uploaded_email_for_customer_v2.html<br>
+                apps/local/iphotographer/templates/iphotographer/emails/fr/bulk_order_confirmation.html<br></td>
+        </tr>
+        <tr>
+            <td>apps/local/iphotographer/templates/photographer/</td>
+            <td>
+                base.photographer.html<br>
+                bill_to_photographer.html<br>
+                block/header.html<br>
+                dashboard/blocks/school_setup.html<br>
+                dashboard/blocks/short_cut_links.html<br>
+                dashboard/index.html<br>
+                dashboard/members/sales/index.html<br>
+                dashboard/profile_completeness.html<br>
+                emails/cut_n_pile_cards_ftp_location.html<br>
+                emails/notification_org_setup_for_sales.html<br>
+                emails/pdf_links.html<br>
+                <table>
+                    <tr>
+                        <td>events/</td>
+                        <td>access_cards/select_albums_for_access_card.html<br>
+                            albums/block/access_cards/get_excel_for_albums.modal.part.html<br>
+                            albums/block/access_cards/js.html<br>
+                            block/jquery_templates/productTemplate.html<br>
+                            events.html<br>
+                            orders/event_based_orders_report_pdf.html<br>
+                            photos/photo_custom_tagging.html<br>
+                            print_jobs/block/print_request_order_document.html<br>
+                            products/composite/lost_cards.html<br>
+                            products/composite/print_albums.html<br>
+                            products/structure/blocks/product.html<br>
+                            products/structure/blocks/products.html<br>
+                            products/structure/blocks/sample_product.html<br>
+                            products/structure/blocks/sub_block_order_list.html<br>
+                            products/structure/blocks/sub_block_order_list_13x18_com.html<br>
+                            products/structure/blocks/sub_block_order_list_accessories_details.html<br>
+                            products/structure/blocks/sub_block_order_list_packs_details.html<br>
+                            products/structure/blocks/sub_block_price_list.html<br>
+                            products/structure/blocks/sub_block_price_list_accessories_details.html<br>
+                            products/structure/blocks/sub_block_price_list_packs_details.html<br>
+                            reports/class_wise_sales.html<br>
+                            upload/js/photos_operations.html<br></td>
+                    </tr>
+                </table>
+                financials/summary.html<br>
+                no_lab/providers.html<br>
+                org/block/ftp_options.html<br>
+                org/centralized_labs/add_centralized_labs_to_the_org.html<br>
+                org/labs/blocks/content.html<br>
+                org/labs/blocks/js.html<br>
+                org/org_copy_products_to_provider.html<br>
+                org/settings/block/side-menu.html<br>
+                org/settings/org_contact_details.html<br>
+                org/settings/tax_information.html<br>
+                org_select/org_select.html<br>
+                <table>
+                    <tr>
+                        <td>recruitment/</td>
+                        <td>email_20140411_photographer_verification_en.html<br>
+                            email_20140411_photographer_verification_fr.html<br>
+                            email_20140411_photographer_welcome_en.html<br>
+                            email_20140411_photographer_welcome_en.txt<br>
+                            email_20140411_photographer_welcome_fr.html<br>
+                            lifecycle-mails/email_profile_page_reminder_en.html<br>
+                            lifecycle-mails/email_profile_page_reminder_fr.html<br>
+                            lifecycle-mails/email_retargeting_reminder_en.html<br>
+                            lifecycle-mails/email_retargeting_reminder_fr.html<br>
+                            lifecycle-mails/email_upload_reminder_en.html<br>
+                            lifecycle-mails/email_upload_reminder_fr.html<br></td>
+                    </tr>
+                </table>
+                reports/orders/ordered_product_report_v2.html<br></td>
+        </tr>
+        <tr>
+            <td colspan="2">apps/local/iphotographer/urls.py <br></td>
+        </tr>
+        <tr>
+            <td>apps/local/iphotographer/views/</td>
+            <td>
+                dashboard/main.py <br>
+                dashboard/members/sales.py <br>
+                events/access_cards/access_cards.py <br>
+                events/customers.py <br>
+                events/main.py <br>
+                events/orders/bulk_orders.py <br>
+                events/orders/reports.py <br>
+                events/photos.py <br>
+                events/products/composite.py <br>
+                events/products/structure.py <br>
+                events/tags.py <br>
+                events/upload.py <br>
+                no_lab/provider.py <br>
+                org.py <br>
+                orgs/create.py <br>
+                orgs/labs/products.py <br>
+                orgs/select.py <br>
+                reports/orders.py <br></td>
+        </tr>
+        <tr>
+            <td colspan="2">apps/local/main/admin.py <br>
+                apps/local/main/emails/photographers.py <br>
+                apps/local/main/lib/cache.py <br>
+                apps/local/main/lib/custom_help_functions.py <br>
+                apps/local/main/lib/elastic.py <br>
+                apps/local/main/lib/elasticcache.py <br></td>
+        </tr>
+        <tr>
+            <td>apps/local/main/management/commands/</td>
+            <td>bulk_copy_pricelist.py <br>
+                celery_checker.py <br>
+                check_celery.py <br>
+                check_order_emails.py <br>
+                check_order_emails_range.py <br>
+                create_base_org_for_photographer.py <br>
+                fix_agent_logins.py <br>
+                fix_org_access_id_code.py <br>
+                generate_default_org_setting_mapping.py <br>
+                generate_photographer_default_settings.py <br>
+                generate_setting_mapping_from_organization_model.py <br>
+                get_school_email_ids_for_photographer.py <br>
+                manage_product_print_prices.py <br>
+                manage_settings.py <br>
+                perf1.py <br>
+                reset_superadmins.py <br>
+                send_reminder_emails_to_parents_with_no_orders.py <br>
+                set_owner_for_orgs.py <br>
+                update_iconea_shipping_info.py <br></td>
+        </tr>
+        <tr>
+            <td colspan="2">apps/local/main/middleware/MysqlQueryLoggerMiddleware.py <br>
+                apps/local/main/middleware/__init__.py <br>
+                apps/local/main/middleware/user_profile_tracking_middleware.py <br></td>
+        </tr>
+        <tr>
+            <td>apps/local/main/migrations/</td>
+            <td>0507_create_super_admins.py <br>
+                0512_access_card_tag_for_extra_product.py <br>
+                0515_org_address_additional_fields.py <br>
+                0516_org_address_update_baseaddress.py <br>
+                0518_secondary_phone_addition_addressbase.py <br>
+                0520_school_invoice_fields.py <br>
+                0521_school_invoice_id.py <br>
+                0522_monthly_school_invoice_fields.py <br>
+                0523_txn_cost_decimal_places_1_to_2.py <br>
+                0524_print_req_shipping_address.py <br>
+                0525_raw_enhanced_and_detoured_url_for_photos.py <br>
+                0526_base_org.py <br>
+                0527_base_org_owner.py <br>
+                0528_uuid_addition.py <br>
+                0529_order_mode_base_org.py <br>
+                0530_base_org_mapping.py <br>
+                0531_base_org_bank_model.py <br>
+                0532_timestampedmodel_for_settings_models.py <br>
+                0533_source_tracking_field.py <br>
+                0534_org_sales_session.py <br>
+                0535_photographer_workflow_models.py <br>
+                0536_org_workflow_tracking.py <br>
+                0537_price_rule_not_sold_after_first_round.py <br>
+                0538_source_tracking_delete_cascade_set_null.py <br>
+                0539_category_for_product_provider.py <br>
+                0540_org_order_bulk_and_hd_fields.py <br>
+                0541_org_user_bulk_cart.py <br>
+                0542_base_org_unique_and_print_req_order_id.py <br>
+                mail-templates/0244/html-mail-en.html<br>
+                mail-templates/0244/html-mail-fr.html<br></td>
+        </tr>
+        <tr>
+            <td>apps/local/main/</td>
+            <td>
+                
+                <table>
+                    <tr>
+                        <td>models.py <br></td>
+                    </tr>
+                    <tr>
+                        <td>submodels/</td>
+                        <td>
+                            entity_variables_models.py <br>
+                            invoice_models.py <br>
+                            organization_member.py <br>
+                            print_job_models.py <br>
+                            subscription_models.py <br>
+                            timestamped_model.py <br></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            tasks/esimagetasks.py <br></td>
+                    </tr>
+                    <tr>
+                        <td>tasks/jobs/</td>
+                        <td>
+                            apis/order_based/iconea_api.py <br>
+                            apis/variables/iconea_transformations.py <br>
+                            orders_based_jobs.py <br>
+                            photos_based_jobs.py <br></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            tasks/photographer/customer_excel_import.py <br></td>
+                    </tr>
+                    <tr>
+                        <td>templates/main/notifications/site/pixfirst/</td>
+                        <td>
+                            jobs/blocks/en/org_job_details.html<br>
+                            jobs/blocks/fr/org_job_details.html<br>
+                            jobs/order_based/fr/job_summary_for_single_order.html<br>
+                            parents/fr/reminder_email_x_days_sales_close.html<br></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            utils.py <br>
+                            views/orders.py <br>
+                            views/pixpass.py <br></td>
+                    </tr>
+                </table>
+                
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                apps/local/rest_framework_simplejwt/authentication.py <br></td>
+        </tr>
+        <tr>
+            <td>apps/local/utils/</td>
+            <td>aws/s3.py <br>
+                cart.py <br>
+                date.py <br>
+                decimal_util.py <br>
+                event.py <br>
+                helper_functions.py <br>
+                offers.py <br>
+                redis_util.py <br>
+                request.py <br>
+                scrappers/pixf_scrapper_v1.py <br>
+                scrappers/reduce_csv.py <br>
+                scrappers/zipcode_lst_long_json.py <br>
+                sessions_helpers.py <br>
+                text.py <br></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                frontend/.gitignore <br>
+                frontend/package.json<br>
+                frontend/public/index.html<br>
+            </td>
+        </tr>
+        <tr>
+            <td>frontend/public/locales/en/</td>
+            <td>
+
+                accessCards.json , 
+                baseorg.json , 
+                common.json , 
+                dashboard.json , 
+                invoices.json , 
+                org.json , 
+                photographer.json , 
+                products.json , 
+                tickets.json , 
+            </td>
+        </tr>
+        <tr>
+            <td>frontend/public/locales/fr/</td>
+            <td>
+                accessCards.json , 
+                baseorg.json , 
+                common.json , 
+                dashboard.json , 
+                invoices.json , 
+                org.json , 
+                photographer.json , 
+                products.json , 
+                tickets.json , </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                frontend/src/apis/photographer/api.js<br>
+                frontend/src/apis/product/api.js<br>
+                frontend/src/components/Configurations/OrgMenus.js<br>
+                frontend/src/components/Configurations/PhotographerMenus.js<br>
+                frontend/src/components/Configurations/index.js<br>
+                frontend/src/components/Configurations/utils.js<br>
+                frontend/src/components/Downloader/ExportToExcel.js<br>
+                frontend/src/components/Header/index.js<br>
+                frontend/src/components/MainHeader/index.js<br>
+                frontend/src/components/Org/useFetchOrgInfo.js<br>
+                frontend/src/components/Sider/index.js<br>
+                frontend/src/components/Uploader/CSVReader.js<br>
+                frontend/src/components/Uploader/style1.css<br></td>
+        </tr>
+        <tr>
+            <td>frontend/src/containers/AccessCards/</td>
+            <td>
+                AccessCards.css<br>
+                HoverCards.js<br>
+                sample-cart-response.json <br>
+                actions.js | 
+                api.js | 
+                constants.js | 
+                index.js | 
+                reducer.js | 
+                saga.js | 
+                selectors.js | </td>
+        </tr>
+        <tr>
+            <td colspan="2">frontend/src/containers/App/index.js<br></td>
+        </tr>
+        <tr>
+            <td>frontend/src/containers/BaseOrg/</td>
+            <td>
+                actions.js | 
+                api.js | 
+                baseOrg.css | 
+                constants.js | 
+                index.js | 
+                reducer.js | 
+                saga.js | 
+                selectors.js | </td>
+        </tr>
+        <tr>
+            <td>frontend/src/containers/BaseOrgCopy/</td>
+            <td>
+                actions.js | 
+                api.js | 
+                constants.js | 
+                index.js | 
+                reducer.js | 
+                saga.js | 
+                selectors.js | </td>
+        </tr>
+        <tr>
+            <td>frontend/src/containers/CalendarView/</td>
+            <td>
+                actions.js | 
+                constants.js | 
+                index.js | 
+                reducer.js | 
+                saga.js | 
+                selectors.js | </td>
+        </tr>
+        <tr>
+            <td>frontend/src/containers/CustomComponents/</td>
+            <td>addressComponents.js<br>
+                bankDetailsUpdate.js<br>
+                baseOrg.js<br>
+                copyBaseOrgForm.js<br>
+                customFormInput.js<br>
+                customVariables.js<br>
+                helperFunctions.js<br>
+                manageSettings.js<br>
+                schoolYear.js<br>
+                settingsDisplay.js<br>
+                updatePasswordForm.js<br>
+                userAddress.js<br>
+                waitModalPopup.js<br></td>
+        </tr>
+        <tr>
+            <td>frontend/src/containers/EventDetails/</td>
+            <td>
+                actions.js | 
+                api.js | 
+                constants.js | 
+                index.js | 
+                reducer.js | 
+                saga.js | 
+                selectors.js | </td>
+        </tr>
+        <tr>
+            <td>frontend/src/containers/Labs/</td>
+            <td>
+                Labs.css | 
+                actions.js | 
+                api.js | 
+                constants.js | 
+                index.js | 
+                reducer.js | 
+                saga.js | 
+                selectors.js | </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                frontend/src/containers/OrderManagement/index.js<br></td>
+        </tr>
+        <tr>
+            <td>frontend/src/containers/Org/</td>
+            <td>
+                actions.js | 
+                api.js | 
+                constants.js | 
+                detailed_box.css | 
+                index.js | 
+                reducer.js | 
+                saga.js | 
+                selectors.js | 
+                settingsDisplayView.js | </td>
+        </tr>
+        <tr>
+            <td>frontend/src/containers/OrgClass/</td>
+            <td>
+                actions.js | 
+                api.js | 
+                constants.js | 
+                index.js | 
+                reducer.js | 
+                saga.js | 
+                selectors.js | </td>
+        </tr>
+        <tr>
+            <td colspan="2">frontend/src/containers/OrgClassAlbum/api.js<br>
+                frontend/src/containers/OrgClassAlbum/index.js<br>
+                frontend/src/containers/OrgClassAlbum/reducer.js<br>
+                frontend/src/containers/OrgCopy/api.js<br>
+                frontend/src/containers/OrgCopy/index.js<br>
+                frontend/src/containers/OrgCopy/reducer.js<br>
+                frontend/src/containers/OrgCreateNew/api.js<br>
+                frontend/src/containers/OrgCreateNew/createOrgForm.js<br>
+                frontend/src/containers/OrgCreateNew/index.js<br>
+                frontend/src/containers/OrgCreateNew/reducer.js<br>
+                frontend/src/containers/OrgDashboard/Onboarding.js<br></td>
+        </tr>
+        <tr>
+            <td>frontend/src/containers/OrgDashboard/OnboardingSteps/</td>
+            <td>
+                Alerts.js<br>
+                StepOne.js | StepTwo.js | StepThree.js | StepFour.js | StepFive.js | StepSix.js | StepSeven.js | StepEight.js<br>
+                StepsList.js<br>
+                index.js<br></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                frontend/src/containers/OrgDashboard/actions.js<br>
+                frontend/src/containers/OrgDashboard/api.js<br>
+                frontend/src/containers/OrgDashboard/constants.js<br>
+                frontend/src/containers/OrgDashboard/index.js<br></td>
+        </tr>
+        <tr>
+            <td>frontend/src/containers/OrgDashboard/pages/</td>
+            <td>
+                ManageClientslDashboard.js<br>
+                ManageFinanceDashboard.js<br>
+                ManageNotificationslDashboard.js<br>
+                ManagePhotoslDashboard.js<br>
+                ManageProductionlDashboard.js<br>
+                ManageProductslDashboard.js<br>
+                ManageReportslDashboard.js<br>
+                ManageSalesDashboard.js<br>
+                ManageSchoolDashboard.js<br>
+                OnBoardingDashboard.js<br>
+                OrgDashboard.js<br>
+                QuickLinkslDashboard.js<br></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                frontend/src/containers/OrgDashboard/reducer.js<br>
+                frontend/src/containers/OrgDashboard/saga.js<br>
+                frontend/src/containers/OrgDashboard/selectors.js<br></td>
+        </tr>
+        <tr>
+            <td>frontend/src/containers/OrgDocuments/</td>
+            <td>
+                actions.js | 
+                api.js | 
+                constants.js | 
+                index.js | 
+                reducer.js | 
+                saga.js | 
+                selectors.js | </td>
+        </tr>
+        <tr>
+            <td>frontend/src/containers/OrgEdit/</td>
+            <td>
+                actions.js | 
+                api.js | 
+                constants.js | 
+                index.js | 
+                reducer.js | 
+                saga.js | 
+                selectors.js | </td>
+        </tr>
+        <tr>
+            <td>frontend/src/containers/OrgManage/</td>
+            <td>
+                actions.js | 
+                api.js | 
+                constants.js | 
+                index.js | 
+                reducer.js | 
+                saga.js | 
+                selectors.js | </td>
+        </tr>
+        <tr>
+            <td>frontend/src/containers/OrgOrder/</td>
+            <td>
+                actions.js | 
+                api.js | 
+                constants.js | 
+                index.js | 
+                reducer.js | 
+                saga.js | 
+                selectors.js | </td>
+        </tr>
+        <tr>
+            <td>frontend/src/containers/OrgReadyCheck/</td>
+            <td>
+                api.js | 
+                index.js | 
+                reducer.js | 
+                saga.js | </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                frontend/src/containers/PhotographerAnalytics/api.js<br>
+                frontend/src/containers/PhotographerAnalytics/index.js<br>
+                frontend/src/containers/PhotographerInvoice/index.js<br>
+                frontend/src/containers/PhotographerInvoice/reducer.js<br>
+                frontend/src/containers/PhotographerInvoice/selectors.js<br></td>
+        </tr>
+        <tr>
+            <td>frontend/src/containers/PhotographerManage/</td>
+            <td>
+                actions.js | 
+                constants.js | 
+                index.js | 
+                reducer.js | 
+                saga.js | 
+                selectors.js | </td>
+        </tr>
+        <tr>
+            <td>frontend/src/containers/PhotographerPlan/</td>
+            <td>
+                actions.js | 
+                constants.js | 
+                index.js | 
+                reducer.js | 
+                saga.js | 
+                selectors.js | </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                frontend/src/containers/PriceList/addProductForm.js<br>
+                frontend/src/containers/PriceList/index.js<br>
+                frontend/src/containers/PriceList/reducer.js<br>
+                frontend/src/containers/PriceLists/actions.js<br>
+                frontend/src/containers/PriceLists/constants.js<br>
+                frontend/src/containers/PriceLists/index.js<br>
+                frontend/src/containers/PriceLists/saga.js<br></td>
+        </tr>
+        <tr>
+            <td>frontend/src/containers/PrintJob/</td>
+            <td>
+                actions.js | 
+                api.js | 
+                constants.js | 
+                index.js | 
+                reducer.js | 
+                saga.js | 
+                selectors.js | </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                frontend/src/containers/PrintJobDetails/index.js<br></td>
+        </tr>
+        <tr>
+            <td>frontend/src/containers/PrintJobFile/</td>
+            <td>
+                actions.js | 
+                api.js | 
+                constants.js | 
+                index.js | 
+                reducer.js | 
+                saga.js | 
+                selectors.js | </td>
+        </tr>
+        <tr>
+            <td>frontend/src/containers/PrintRequest/</td>
+            <td>
+                actions.js | 
+                api.js | 
+                constants.js | 
+                index.js | 
+                reducer.js | 
+                saga.js | 
+                selectors.js | </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                frontend/src/containers/Product/index.js<br>
+                frontend/src/containers/Product/reducer.js<br>
+                frontend/src/containers/ProductsReport/actions.js<br>
+                frontend/src/containers/ProductsReport/api.js<br>
+                frontend/src/containers/ProductsReport/index.js<br>
+                frontend/src/containers/ProductsReport/reducer.js<br>
+                frontend/src/containers/ProductsReport/selectors.js<br></td>
+        </tr>
+        <tr>
+            <td>frontend/src/containers/Profile/</td>
+            <td>
+                actions.js | 
+                api.js | 
+                constants.js | 
+                index.js | 
+                reducer.js | 
+                saga.js | 
+                selectors.js | </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                frontend/src/containers/Schools/api.js<br>
+                frontend/src/containers/TicketCreation/index.js<br></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                frontend/src/i18n.js<br>
+                frontend/src/routes.js<br>
+                </td>
+        </tr>
+        <tr>
+            <td>frontend/src/utils/mockAPI/</td>
+            <td>mockData/accessCards.json<br>
+                mockData/org.json<br>
+                mockData/posts.json<br>
+                mockData/users.json<br>
+                mockRequest.js<br></td>
+        </tr>
+        <tr>
+            <td colspan="2">frontend/src/utils/request.js<br>
+                frontend/src/utils/token.js<br></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                projects/celery_config.py <br>
+                projects/celeryconfig.py <br>
+                projects/common_settings.py <br>
+                projects/setup_server/configs/common_settings_override_template.py <br>
+                projects/templates/main/base.app.html<br>
+                projects/templates/main/base.html<br>
+                projects/templates/main/block/footer.html<br>
+                projects/templates/v40/main/block/header.html<br>
+                projects/urls.py <br></td>
+        </tr>
+    </table>
+    <hr>
+</body>
+</html>
+
+
+
+
+
+requirements.txt<br>
+scripts/images/v44/copy_s3_files.sh<br>
+scripts/images/v44/create_from_original_photo.sh<br>
+scripts/images/v44/matisseo/s3_to_ftp_upload.sh<br>
+scripts/images/v44/wkhtmltopdf/create_pdf_or_jpg.sh<br>
